@@ -1,0 +1,6 @@
+.products__row {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 25fr 50fr 25fr;
+    gap: 40px;
+}

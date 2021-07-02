@@ -1,0 +1,17 @@
+.homepage-main {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    padding-left: 10%;
+    align-items: center;
+
+    /*Поменять на картинку!!! */
+    background: var(--dark-primary-color);
+}
+.homepage-main__title {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+
+}

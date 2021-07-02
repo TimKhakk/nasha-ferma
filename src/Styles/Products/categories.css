@@ -1,0 +1,33 @@
+
+.categories {
+    background: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    padding-bottom: 10px;
+}
+
+.categories__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+
+.categories__item {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--light-secondary-color);
+    align-items: center;
+    padding: 20px 0;
+}
+
+.categories__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
