@@ -8,6 +8,11 @@
     border: 1px solid var(--secondary-color);
     background: white;
     padding: 18px;
+    transition: box-shadow .2s;
+}
+
+.product-card-item:hover {
+    box-shadow: 0 6px 12px -6px rgba(24, 39, 75, 0.08), 0 8px 24px -4px rgba(24, 39, 75, 0.05);
 }
 
 .product-card-item__title {
@@ -39,6 +44,13 @@
     cursor: pointer;
     border-radius: 30px;
     background: var(--light-primary-color);
+    transition: background .2s;
+}
+
+.product-card-item__minus-btn:hover,
+.product-card-item__plus-btn:hover,
+.product-card-item__btn-add-to-cart:hover {
+    background: var(--light-hovered-primary-color);
 }
 
 .product-card-item__weight {
@@ -71,4 +83,5 @@
     border-radius: 50%;
     cursor: pointer;
     background: var(--light-primary-color);
+    transition: background .2s;
 }

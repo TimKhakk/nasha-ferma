@@ -13,13 +13,13 @@ function Products() {
 
 	const [ cart, setCart ] = useState([]);
 
-	const plusProduct = (id, prevCart, sameItem) => {
-		const updatedCart = prevCart.filter(item => item.id !== sameItem.id);
-
-		const updatedProduct = {...sameItem, count: sameItem.count + 1};
-
-		return [...updatedCart, updatedProduct]
-	};
+	// const plusProduct = (id, prevCart, sameItem) => {
+	// 	const updatedCart = prevCart.filter(item => item.id !== sameItem.id);
+	//
+	// 	const updatedProduct = {...sameItem, count: sameItem.count + 1};
+	//
+	// 	return [...updatedCart, updatedProduct]
+	// };
 
 	const plusProductToCart = (id) => {
 		setCart(prevCart => {
@@ -62,35 +62,21 @@ function Products() {
 		})
 	};
 
-
-	// Добавляем товар в корзину
 	const addToCart = (id) => {
 		setCart(prevCart => {
 			const newProduct = data.find(item => item.id === id);
 			newProduct.count = 1;
 
-			// Если товар в корзине уже есть, то добавить количество
-			// const sameItem = prevCart.find(item => item.id === newProduct.id);
-			// if (sameItem !== undefined) {
-			// 	return plusProduct(id, prevCart, sameItem);
-			// }
-			// const sameItem = prevCart.find(item => item.id === newProduct.id);
-			// if (sameItem !== undefined) {
-			// 	return plusProductToCart(id);
-			// }
-
 			// Если товар в корзине нет, то добавить
 			return [...prevCart, newProduct]
 
 		})
-	};
+	}; // Добавляем товар в корзину
 
-	// Считаем всю сумму
-	const countTotalPrice = () => cart.reduce((sum, item) => sum + (item.price * item.count), 0);
+	const countTotalPrice = () => cart.reduce((sum, item) => sum + (item.price * item.count), 0); // Считаем всю сумму
 
 	console.log('Корзина пользователя: ', cart);
 	console.log('Товаров в корзине на сумму: ', countTotalPrice());
-
 
 	return (
 		<div className="products">
