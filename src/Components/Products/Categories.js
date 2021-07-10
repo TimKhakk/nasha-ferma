@@ -3,10 +3,12 @@ function Categories({products}) {
 
 	const renderCategories = () => {
 		return products.map((item, index) => {
-			return <li key={index} className="categories__item">
+			return (
+					<li key={index} className="categories__item">
 						<span className="categories__item-title">{item[0].category}</span>
 						<div className="categories__item-count">{item.length}</div>
 					</li>
+				)
 			});
 	};
 
