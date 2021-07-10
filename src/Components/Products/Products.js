@@ -16,6 +16,17 @@ function Products() {
 
 	const [ cart, setCart ] = useState(getLocalStorage);
 
+	const [ category, setCategory ] = useState('Овощи');
+
+	const filterProducts = (value) => {
+		const newProducts = data.filter(item => item[value] === value)
+		return newProducts;
+	};
+
+	const categoriedProducts = filterProducts(category); // [{}, {}]
+
+	console.log('Продукты по категории', categoriedProducts);
+
 	const plusProductToCart = (id) => {
 		setCart(prevCart => {
 			const foundProduct = prevCart.find(item => item.id === id);
