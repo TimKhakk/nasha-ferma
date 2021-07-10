@@ -11,7 +11,10 @@ function Products() {
 	const allCategories = [...new Set(data.map(item => item.category))]; // ["Огурцы", "Томаты"]
 	const products = allCategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
 
-	const [ cart, setCart ] = useState([]);
+	const getLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
+	const setLocalStorage = data => localStorage.setItem('cartLocalStorage', JSON.stringify(data));
+
+	const [ cart, setCart ] = useState(getLocalStorage);
 
 	// const plusProduct = (id, prevCart, sameItem) => {
 	// 	const updatedCart = prevCart.filter(item => item.id !== sameItem.id);
@@ -33,14 +36,15 @@ function Products() {
 					return item
 				}
 			})
+			setLocalStorage(updatedCart);
 			return updatedCart;
 		})
 	};
 
 	const deleteProduct = (id) => setCart(prevCart => {
-		return prevCart.filter(item => {
-			return item.id !== id;
-		});
+		const updatedCart = prevCart.filter(item => item.id !== id);
+		setLocalStorage(updatedCart);
+		return updatedCart;
 	})
 
 	const minusProductToCart = (id) => {
@@ -58,6 +62,8 @@ function Products() {
 					return item
 				}
 			});
+
+			setLocalStorage(updatedCart);
 			return updatedCart;
 		})
 	};
@@ -66,9 +72,11 @@ function Products() {
 		setCart(prevCart => {
 			const newProduct = data.find(item => item.id === id);
 			newProduct.count = 1;
+			const updatedCart = [...prevCart, newProduct];
 
-			// Если товар в корзине нет, то добавить
-			return [...prevCart, newProduct]
+			setLocalStorage(updatedCart);
+
+			return updatedCart;
 
 		})
 	}; // Добавляем товар в корзину
