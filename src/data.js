@@ -4,7 +4,8 @@ export const data = [
 		name: 'Огурец гладкий среднеплодный',
 		price: 79,
 		weight: 1000,
-		category: 'Огурцы',
+		category: 'Овощи',
+		group: 'Огурцы',
 		imgUrl: 'https://api.magonline.ru/thumbnail/370x370/12/290/12290.png',
 	},
 	{
@@ -12,7 +13,8 @@ export const data = [
 		name: 'Огурец Малика',
 		price: 549,
 		weight: 1000,
-		category: 'Огурцы',
+		category: 'Овощи',
+		group: 'Огурцы',
 		imgUrl: 'https://quality-seeds.ru/upload/iblock/525/525f7901cd097b76617d2151491cd1fe.png',
 	},
 	{
@@ -20,7 +22,8 @@ export const data = [
 		name: 'Огурец сладкий',
 		price: 149,
 		weight: 1000,
-		category: 'Огурцы',
+		category: 'Овощи',
+		group: 'Огурцы',
 		imgUrl: 'https://profpacket.ru/wp-content/uploads/2018/04/ogurci_b.png',
 	},
 	{
@@ -28,7 +31,8 @@ export const data = [
 		name: 'Огурец Зозуля',
 		price: 99,
 		weight: 1000,
-		category: 'Огурцы',
+		category: 'Овощи',
+		group: 'Огурцы',
 		imgUrl: 'https://aroma-profi.ru/upload/iblock/36c/36c7320ab9063306eabcfe9e4c05018d.png',
 	},
 	{
@@ -36,7 +40,8 @@ export const data = [
 		name: 'Соленья Рязани',
 		price: 29,
 		weight: 1000,
-		category: 'Огурцы',
+		category: 'Овощи',
+		group: 'Огурцы',
 		imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVmu2NjuuVlK498ymzFHWGL3rhRLS6JuyERw&usqp=CAU',
 	},
 	{
@@ -44,7 +49,8 @@ export const data = [
 		name: 'Томато',
 		price: 79,
 		weight: 1000,
-		category: 'Томаты',
+		category: 'Овощи',
+		group: 'Томаты',
 		imgUrl: 'http://tknso.ru/images/teplica-catalog-555x417_1/item/cbf4rzcxwj.png',
 	},
 	{
@@ -52,7 +58,8 @@ export const data = [
 		name: 'Розовые помидоры',
 		price: 69,
 		weight: 1000,
-		category: 'Томаты',
+		category: 'Овощи',
+		group: 'Томаты',
 		imgUrl: 'https://imgproxy.sbermarket.ru/imgproxy/size-500-500/aHR0cHM6Ly9zYmVybWFya2V0LnJ1L3NwcmVlL3Byb2R1Y3RzLzE1NjA0MDMvb3JpZ2luYWwvMTk3MzgxXzEucG5nPzE2MDc4NTg0MjQ.png',
 	},
 	{
@@ -61,6 +68,7 @@ export const data = [
 		price: 679,
 		weight: 100,
 		category: 'Молочные продукты',
+		group: 'Сыры',
 		imgUrl: 'https://zakaz.spar-kaliningrad.ru/upload/iblock/dda/dda70ce4ef56543ab18012e42717dc18.png',
 	},
 	{
@@ -69,6 +77,7 @@ export const data = [
 		price: 559,
 		weight: 100,
 		category: 'Молочные продукты',
+		group: 'Сыры',
 		imgUrl: 'https://cheese-home.com//files/materials/рецепты/монтерей%20джек/jack.png',
 	},
 	{
@@ -77,6 +86,7 @@ export const data = [
 		price: 149,
 		weight: 100,
 		category: 'Молочные продукты',
+		group: 'Сыры',
 		imgUrl: 'http://cheasy.ru/img/cms/российский.png',
 	},
 	{
@@ -85,6 +95,7 @@ export const data = [
 		price: 379,
 		weight: 100,
 		category: 'Молочные продукты',
+		group: 'Сыры',
 		imgUrl: 'https://vincenzo-pizza.com.ua/userfiles/additives/20200614110315kisspng_blue_cheese_milk_goat_cheese_roquefort_5b08c4d89d29515864376615273013366438.png.pagespeed.ce.gA4sknRj_r.png',
 	},
 
