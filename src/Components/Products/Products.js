@@ -16,14 +16,6 @@ function Products() {
 
 	const [ cart, setCart ] = useState(getLocalStorage);
 
-	// const plusProduct = (id, prevCart, sameItem) => {
-	// 	const updatedCart = prevCart.filter(item => item.id !== sameItem.id);
-	//
-	// 	const updatedProduct = {...sameItem, count: sameItem.count + 1};
-	//
-	// 	return [...updatedCart, updatedProduct]
-	// };
-
 	const plusProductToCart = (id) => {
 		setCart(prevCart => {
 			const foundProduct = prevCart.find(item => item.id === id);
