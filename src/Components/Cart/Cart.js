@@ -1,58 +1,6 @@
 import Breadcrumbs from "../Default/Breadcrumbs";
-import { useState } from "react";
 
-function Cart() {
-
-	const getLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
-	const setLocalStorage = data => localStorage.setItem('cartLocalStorage', JSON.stringify(data));
-
-	const [ cart, setCart ] = useState(getLocalStorage);
-
-	const plusProductToCart = (id) => {
-		setCart(prevCart => {
-			const foundProduct = prevCart.find(item => item.id === id);
-			const updatedProduct = {...foundProduct, count: foundProduct.count + 1};
-
-			const updatedCart = prevCart.map(item => {
-				if (item.id === updatedProduct.id) {
-					return updatedProduct
-				} else {
-					return item
-				}
-			})
-			setLocalStorage(updatedCart);
-			return updatedCart;
-		})
-	};
-
-	const deleteProduct = (id) => setCart(prevCart => {
-		const updatedCart = prevCart.filter(item => item.id !== id);
-		setLocalStorage(updatedCart);
-		return updatedCart;
-	})
-
-	const minusProductToCart = (id) => {
-		setCart(prevCart => {
-			const foundProduct = prevCart.find(item => item.id === id);
-			if(foundProduct.count <= 1) {
-				deleteProduct(id)
-			}
-			const updatedProduct = {...foundProduct, count: foundProduct.count - 1};
-
-			const updatedCart = prevCart.map(item => {
-				if (item.id === updatedProduct.id) {
-					return updatedProduct;
-				} else {
-					return item
-				}
-			});
-
-			setLocalStorage(updatedCart);
-			return updatedCart;
-		})
-	};
-
-	const countTotalPrice = () => cart.reduce((sum, item) => sum + (item.price * item.count), 0); // Считаем всю сумму
+function Cart({cart, plusProductToCart, deleteProduct, minusProductToCart, countTotalPrice}) {
 
 	return (
 		<>
