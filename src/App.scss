@@ -1,0 +1,24 @@
+/* Default */
+@import "Styles/Default/default.scss";
+@import "Styles/Default/variables.scss";
+@import "Styles/Default/container.scss";
+@import "Styles/Default/breadcrumbs.scss";
+
+/* Header */
+@import "Styles/Header/header.scss";
+
+/* Homepage */
+/*@import "Styles/Homepage/homepage.scss";*/
+@import "Styles/Homepage/homepage-main.scss";
+
+
+/* Products */
+@import "Styles/Products/products.scss";
+@import "Styles/Products/categories.scss";
+@import "Styles/Products/product-cards.scss";
+@import "Styles/Products/product-card-item.scss";
+@import "Styles/Products/mini-cart.scss";
+@import "Styles/Products/mini-cart-bottom.scss";
+
+/* Cart page */
+@import "Styles/Cart/cart.scss";
