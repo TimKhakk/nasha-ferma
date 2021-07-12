@@ -12,7 +12,7 @@ function Breadcrumbs({paths, name}) {
 						{paths && paths.map(item => {
 							return <Link to={`/${item.path}`} className="breadcrumb">{item.name} > </Link>
 						})}
-						{name}
+						<span className="breadcrumb_disabled">{name}</span>
 					</div>
 
 				</div>

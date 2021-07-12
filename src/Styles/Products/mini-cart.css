@@ -11,7 +11,12 @@
 
 .mini-cart_empty {
     text-align: center;
-    padding: 50px 0;
+    padding: 30px 60px 30px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .mini-cart__title {
@@ -103,4 +108,11 @@
     cursor: pointer;
     border-radius: 30px;
     background: var(--primary-color);
+}
+
+.mini-cart__title_empty {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--light-grey-color);
 }

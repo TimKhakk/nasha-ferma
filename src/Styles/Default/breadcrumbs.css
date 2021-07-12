@@ -1,6 +1,14 @@
 .breadcrumbs {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    color: black;
     padding: 22px 0;
     border-top: 2px solid var(--light-secondary-color);
     border-bottom: 2px solid var(--light-secondary-color);
     margin-bottom: 40px;
+}
+
+.breadcrumb_disabled {
+    color: var(--light-grey-color);
 }

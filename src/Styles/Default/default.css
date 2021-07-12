@@ -5,10 +5,14 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Gilroy', sans-serif;
 }
 
 a {
     color: black;
     text-decoration: none;
+}
+
+button {
+    font-family: 'Gilroy', sans-serif;
 }

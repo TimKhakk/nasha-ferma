@@ -2,11 +2,10 @@
 .categories {
     background: var(--secondary-color);
     border-radius: 10px;
-    padding: 20px 40px 0 40px;
+    padding: 20px 0px 0 0px;
     display: flex;
     flex-direction: column;
     height: min-content;
-    padding-bottom: 10px;
 }
 
 .categories__list {
@@ -22,12 +21,46 @@
     justify-content: space-between;
     border-top: 1px solid var(--light-secondary-color);
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+}
+
+.categories__item:last-child {
+    padding-bottom: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.categories__item:hover {
+    background: var(--light-secondary-color);
+}
+
+.categories__item:hover .categories__item-count {
+    color: var(--dark-grey-color);
 }
 
 .categories__title {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
-    padding-bottom: 20px;
+    padding: 0 40px 20px 40px;
+}
+
+.categories__item-title {
+    font-weight: 500;
+    color: var(--dark-grey-color);
+}
+
+.categories__item-count {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: var(--light-secondary-color);
+    border-radius: 50%;
+    font-weight: 500;
+    color: #AFAFAF;
 }
