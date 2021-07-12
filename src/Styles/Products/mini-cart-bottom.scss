@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    border-top: 1px solid var(--secondary-color);
+    border-top: 1px solid $secondary-color;
     gap: 10px;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .mini-cart-bottom__item-title {
-    color: var(--dark-grey-color);
+    color: $dark-grey-color;
 }
 
 .mini-cart-bottom__item-value {
@@ -35,7 +35,7 @@
 }
 
 .mini-cart-bottom__price-title {
-    color: var(--dark-grey-color);
+    color: $dark-grey-color;
 }
 
 .mini-cart-bottom__price {

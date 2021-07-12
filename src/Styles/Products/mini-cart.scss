@@ -1,7 +1,7 @@
 
 .mini-cart {
     background: white;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid $secondary-color;
     border-radius: 10px;
     padding-bottom: 20px;
     height: min-content;
@@ -24,7 +24,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
-    background: var(--secondary-color);
+    background: $secondary-color;
     border-top-left-radius:  10px;
     border-top-right-radius:  10px;
 }
@@ -38,14 +38,14 @@
     grid-column-gap: 5px;
 
     padding: 12px 20px;
-    border-top: 1px solid var(--secondary-color);
-}
+    border-top: 1px solid $secondary-color;
 
-.mini-cart-item__title {
-    grid-column: span 5;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
+    &__title {
+        grid-column: span 5;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+    }
 }
 
 .mini-cart-item__total-price {
@@ -82,12 +82,12 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: var(--secondary-color);
+    background: $secondary-color;
     font-size: 15px;
 }
 
 .mini-cart-item__btn-svg {
-    fill: var(--light-grey-color);
+    fill: $light-grey-color;
 }
 
 .mini-cart-item__delete-btn {
@@ -102,7 +102,7 @@
 }
 
 .mini-cart-item__delete-btn-svg {
-    fill: var(--dark-grey-color);
+    fill: $dark-grey-color;
 }
 
 .mini-cart__buy {
@@ -116,14 +116,14 @@
     padding: 10px 25px;
     cursor: pointer;
     border-radius: 30px;
-    background: var(--primary-color);
+    background: $primary-color;
 }
 
 .mini-cart__title_empty {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-    color: var(--light-grey-color);
+    color: $light-grey-color;
 }
 
 .big-cart-item__total-price {

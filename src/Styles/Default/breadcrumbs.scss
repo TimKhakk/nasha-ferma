@@ -4,13 +4,13 @@
     font-weight: 500;
     color: black;
     padding: 22px 0;
-    border-top: 1px solid var(--light-secondary-color);
-    border-bottom: 1px solid var(--light-secondary-color);
+    border-top: 1px solid $light-secondary-color;
+    border-bottom: 1px solid $light-secondary-color;
     margin-bottom: 40px;
 }
 
 .breadcrumb_disabled {
-    color: var(--light-grey-color);
+    color: $light-grey-color;
 }
 
 .breadcrumb__arrow {
