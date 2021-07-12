@@ -3,7 +3,7 @@ import Categories   from "./Categories";
 import ProductCards from "./ProductCards";
 import MiniCart     from "./MiniCart";
 
-function Products({products, cart, plusProductToCart, deleteProduct, minusProductToCart, addToCart, countTotalPrice}) {
+function products({products, cart, plusProductToCart, deleteProduct, minusProductToCart, addProductToCart, countTotalPrice, categoriedProducts, groups, changeCategory}) {
 
 	return (
 		<div className="products">
@@ -14,15 +14,19 @@ function Products({products, cart, plusProductToCart, deleteProduct, minusProduc
 
 				<div className="products__row">
 
-					<Categories   products={products}/>
+					<Categories
+						products={products}
+						changeCategory={changeCategory}
+					/>
 
 					<ProductCards
 						cart={cart}
 						plusProductToCart={plusProductToCart}
 						deleteProduct={deleteProduct}
 						minusProductToCart={minusProductToCart}
-						products={products}
-						addToCart={addToCart}
+						addProductToCart={addProductToCart}
+						categoriedProducts={categoriedProducts}
+						groups={groups}
 					/>
 
 					<MiniCart
@@ -39,4 +43,4 @@ function Products({products, cart, plusProductToCart, deleteProduct, minusProduc
 	);
 }
 
-export default Products;
+export default products;

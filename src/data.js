@@ -98,5 +98,32 @@ export const data = [
 		group: 'Сыры',
 		imgUrl: 'https://vincenzo-pizza.com.ua/userfiles/additives/20200614110315kisspng_blue_cheese_milk_goat_cheese_roquefort_5b08c4d89d29515864376615273013366438.png.pagespeed.ce.gA4sknRj_r.png',
 	},
+	{
+		id: 16,
+		name: 'Голубика',
+		price: 69,
+		weight: 100,
+		category: 'Ягоды',
+		group: 'Ягоды',
+		imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsupermalina.ru%2Fwp-content%2Fuploads%2F2018%2F03%2Fgolubika.png&f=1&nofb=1',
+	},
+	{
+		id: 17,
+		name: 'Клубника',
+		price: 79,
+		weight: 100,
+		category: 'Ягоды',
+		group: 'Ягоды',
+		imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F53%2F82%2F0b%2F53820b4fc40ce49844c59ae532188459.png&f=1&nofb=1',
+	},
+	{
+		id: 18,
+		name: 'Малина',
+		price: 89,
+		weight: 100,
+		category: 'Ягоды',
+		group: 'Ягоды',
+		imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.stollerukraine.com.ua%2Fassets%2Fimages%2Fmalina-prod.png&f=1&nofb=1',
+	},
 
 ];

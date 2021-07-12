@@ -1,15 +1,17 @@
 
-function ProductCards({cart, plusProductToCart, minusProductToCart, products, addToCart}) {
+function ProductCards({cart, plusProductToCart, minusProductToCart, addProductToCart, categoriedProducts, groups}) {
 
+	console.table(categoriedProducts);
 
-	const renderProducts = () => {
-		return products.map((product) => {
+	const renderproducts = () => {
+		return groups.map(group => {
+			const groupedProducts = categoriedProducts.filter(item => item.group === group);
 			return (
 				<div className="product-card">
-					<h4 className="product-card__title">{product[0].category}</h4>
+					<h4 className="product-card__title">{group}</h4>
 
 					<div className="product-card__items">
-						{product.map(({ id, name, price, weight, imgUrl}) => {
+						{groupedProducts.map(({ id, name, price, weight, imgUrl}) => {
 							return (
 								<div className="product-card-item">
 									<div className="product-card-item__img-block">
@@ -37,7 +39,7 @@ function ProductCards({cart, plusProductToCart, minusProductToCart, products, ad
 										<button
 											key={id}
 											className="product-card-item__btn-add-to-cart"
-											onClick={() => addToCart(id)}
+											onClick={() => addProductToCart(id)}
 										>{price} ₽</button>
 									}
 
@@ -54,7 +56,7 @@ function ProductCards({cart, plusProductToCart, minusProductToCart, products, ad
 
 	return (
 		<div className="product-cards">
-			{renderProducts()}
+			{renderproducts()}
 		</div>
 	);
 }

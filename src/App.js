@@ -13,25 +13,26 @@ import { useState } from "react";
 
 
 function App() {
+	const getCartLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
+	const setCartLocalStorage = cart => localStorage.setItem('cartLocalStorage', JSON.stringify(cart));
 
-	const allCategories = [...new Set(data.map(item => item.category))]; // ["Огурцы", "Томаты"]
-	const products = allCategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
+	const getSelectedCartegoryLocalStorage = () => JSON?.parse(localStorage.getItem('selectedCategoryLocalStorage')) || "Овощи";
+	const setSelectedCartegoryLocalStorage = category => localStorage.setItem('selectedCategoryLocalStorage', JSON.stringify(category));
 
-	const getLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
-	const setLocalStorage = data => localStorage.setItem('cartLocalStorage', JSON.stringify(data));
+	const [ cart, setCart ] = useState(getCartLocalStorage);
+	const [ category, setCategory ] = useState(getSelectedCartegoryLocalStorage);
 
-	const [ cart, setCart ] = useState(getLocalStorage);
+	const changeCategory = (category) => {
+		return setCategory(() => {
+			setSelectedCartegoryLocalStorage(category);
+			return category
+		})
+	}
 
-	const [ category, setCategory ] = useState('Овощи');
-
-	const filterProducts = (value) => {
-		const newProducts = data.filter(item => item[value] === value)
-		return newProducts;
-	};
-
-	const categoriedProducts = filterProducts(category); // [{}, {}]
-
-	console.log('Продукты по категории', categoriedProducts);
+	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
+	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
+	const categoriedProducts = data.filter(item => item.category === category); // [{"Овощи"}, {"Овощи"}]
+	const groups = [...new Set(categoriedProducts.map(item => item.group))]; // ["Огурцы", "Томаты"]
 
 	const plusProductToCart = (id) => {
 		setCart(prevCart => {
@@ -45,14 +46,14 @@ function App() {
 					return item
 				}
 			})
-			setLocalStorage(updatedCart);
+			setCartLocalStorage(updatedCart);
 			return updatedCart;
 		})
 	};
 
 	const deleteProduct = (id) => setCart(prevCart => {
 		const updatedCart = prevCart.filter(item => item.id !== id);
-		setLocalStorage(updatedCart);
+		setCartLocalStorage(updatedCart);
 		return updatedCart;
 	})
 
@@ -72,28 +73,25 @@ function App() {
 				}
 			});
 
-			setLocalStorage(updatedCart);
+			setCartLocalStorage(updatedCart);
 			return updatedCart;
 		})
 	};
 
-	const addToCart = (id) => {
+	const addProductToCart = (id) => {
 		setCart(prevCart => {
 			const newProduct = data.find(item => item.id === id);
 			newProduct.count = 1;
 			const updatedCart = [...prevCart, newProduct];
 
-			setLocalStorage(updatedCart);
+			setCartLocalStorage(updatedCart);
 
 			return updatedCart;
 
 		})
-	}; // Добавляем товар в корзину
+	};
 
 	const countTotalPrice = () => cart.reduce((sum, item) => sum + (item.price * item.count), 0); // Считаем всю сумму
-
-	console.log('Корзина пользователя из App: ', cart);
-	console.log('Товаров в корзине на сумму из App: ', countTotalPrice());
 
 	return (
 		<div className="app">
@@ -109,8 +107,11 @@ function App() {
 						deleteProduct={deleteProduct}
 						minusProductToCart={minusProductToCart}
 						products={products}
-						addToCart={addToCart}
+						addProductToCart={addProductToCart}
 						countTotalPrice={countTotalPrice}
+						categoriedProducts={categoriedProducts}
+						groups={groups}
+						changeCategory={changeCategory}
 					/>
 				</Route>
 
