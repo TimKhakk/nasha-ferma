@@ -10,6 +10,7 @@ function Categories({cart, plusProductToCart, deleteProduct, minusProductToCart,
 				return (
 					<div key={id} className="mini-cart-item">
 						<p className="mini-cart-item__title">{name}, {weight >= 1000 ? <>{weight / 1000} кг</> : <>{weight} г</>}</p>
+
 						<span className="mini-cart-item__total-price">{price * count} ₽</span>
 
 						<button
@@ -42,6 +43,8 @@ function Categories({cart, plusProductToCart, deleteProduct, minusProductToCart,
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M13.807 5.533a1.904 1.904 0 01-1.86-1.525l-.193-.963c-.04-.146-.207-.274-.397-.274H8.006a.419.419 0 00-.406.31l-.184.927a1.903 1.903 0 01-1.86 1.525.594.594 0 010-1.187c.337 0 .63-.241.696-.572l.192-.963c.196-.737.835-1.227 1.562-1.227h3.35c.728 0 1.366.49 1.554 1.192l.201.998a.713.713 0 00.696.572.594.594 0 010 1.187z" />
 							</svg>
 						</button>
+
+						<span className="mini-cart-item__price">{price} ₽</span>
 					</div>
 				)
 			})}

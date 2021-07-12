@@ -64,7 +64,8 @@
 .product-card-item__btns-block {
     display: grid;
     grid-template-columns: min-content 1fr min-content;
-    gap: 15px;
+    margin: 0px 15px;
+    gap: 10px;
 }
 
 .product-card-item__total-count {
@@ -78,6 +79,8 @@
 
 .product-card-item__minus-btn,
 .product-card-item__plus-btn {
+    display: grid;
+    place-items: center;
     width: 35px;
     height: 35px;
     border: none;
@@ -85,4 +88,9 @@
     cursor: pointer;
     background: var(--light-primary-color);
     transition: background .2s;
+}
+
+.product-card-item__minus-btn-svg
+.product-card-item__plus-btn-svg {
+    fill: #0BA360;
 }

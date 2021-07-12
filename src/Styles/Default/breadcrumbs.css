@@ -4,11 +4,15 @@
     font-weight: 500;
     color: black;
     padding: 22px 0;
-    border-top: 2px solid var(--light-secondary-color);
-    border-bottom: 2px solid var(--light-secondary-color);
+    border-top: 1px solid var(--light-secondary-color);
+    border-bottom: 1px solid var(--light-secondary-color);
     margin-bottom: 40px;
 }
 
 .breadcrumb_disabled {
     color: var(--light-grey-color);
+}
+
+.breadcrumb__arrow {
+    margin: 0 10px;
 }

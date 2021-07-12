@@ -20,9 +20,5 @@
 @import "Styles/Products/mini-cart.css";
 @import "Styles/Products/mini-cart-bottom.css";
 
-
-
-
-
-
-
+/* Cart page */
+@import "Styles/Cart/cart.css";

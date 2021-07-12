@@ -16,15 +16,15 @@ function App() {
 	const getCartLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
 	const setCartLocalStorage = cart => localStorage.setItem('cartLocalStorage', JSON.stringify(cart));
 
-	const getSelectedCartegoryLocalStorage = () => JSON?.parse(localStorage.getItem('selectedCategoryLocalStorage')) || "Овощи";
-	const setSelectedCartegoryLocalStorage = category => localStorage.setItem('selectedCategoryLocalStorage', JSON.stringify(category));
+	const getSelectedCategoryLocalStorage = () => JSON?.parse(localStorage.getItem('selectedCategoryLocalStorage')) || "Овощи";
+	const setSelectedCategoryLocalStorage = category => localStorage.setItem('selectedCategoryLocalStorage', JSON.stringify(category));
 
 	const [ cart, setCart ] = useState(getCartLocalStorage);
-	const [ category, setCategory ] = useState(getSelectedCartegoryLocalStorage);
+	const [ category, setCategory ] = useState(getSelectedCategoryLocalStorage);
 
 	const changeCategory = (category) => {
 		return setCategory(() => {
-			setSelectedCartegoryLocalStorage(category);
+			setSelectedCategoryLocalStorage(category);
 			return category
 		})
 	}

@@ -26,7 +26,11 @@ function ProductCards({cart, plusProductToCart, minusProductToCart, addProductTo
 											<button
 												className="product-card-item__minus-btn"
 												onClick={() => minusProductToCart(id)}
-											>-</button>
+											>
+												<svg className="product-card-item__minus-btn-svg" width="15" height="2px">
+													<rect fill="#0BA360" x="15" y="0.5" width="1" height="15" rx="0.5" transform="rotate(90 15 0.5)"/>
+												</svg>
+											</button>
 
 											<span className="product-card-item__total-count">
 												{cart.map(item => item.id === id && item.count)}
@@ -35,7 +39,12 @@ function ProductCards({cart, plusProductToCart, minusProductToCart, addProductTo
 											<button
 												onClick={() => { plusProductToCart(id) } }
 												className="product-card-item__plus-btn"
-											>+</button></div> :
+											>
+												<svg className="product-card-item__plus-btn-svg" viewBox="0 0 15 15" width="15px" height="15px">
+													<rect x="7" y="0.5" width="1" height="15" rx="0.5" fill="#0BA360"/>
+													<rect x="15" y="7.5" width="1" height="15" rx="0.5" fill="#0BA360" transform="rotate(90 15 7.5)"/>
+												</svg>
+											</button></div> :
 										<button
 											key={id}
 											className="product-card-item__btn-add-to-cart"
