@@ -3,6 +3,12 @@
   background: $secondary-color;
   margin-top: 50px;
 
+  &-logo {
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   &__top {
     border-bottom: 1px solid $light-secondary-color;
     padding: 40px 0;
@@ -13,5 +19,9 @@
     grid-template-columns: 1fr 140px 140px;
     grid-template-rows: 1fr;
     gap: 27px;
+  }
+
+  &-top__download-btn {
+    height: 49px;
   }
 }

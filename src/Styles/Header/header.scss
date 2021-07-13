@@ -42,11 +42,18 @@ nav {
 }
 
 .nav__side-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 38px;
     background: $primary-color;
     color: white;
+}
+
+.nav__side-item {
+    fill: white;
 }
 
 .nav__side-item.disabled {

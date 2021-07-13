@@ -1,4 +1,5 @@
 .breadcrumbs {
+
     font-size: 14px;
     line-height: 17px;
     font-weight: 500;
@@ -7,6 +8,11 @@
     border-top: 1px solid $light-secondary-color;
     border-bottom: 1px solid $light-secondary-color;
     margin-bottom: 40px;
+}
+
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
 }
 
 .breadcrumb_disabled {

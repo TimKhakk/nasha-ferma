@@ -31,11 +31,11 @@ function Cart({cart, plusProductToCart, deleteProduct, minusProductToCart, count
 
 								<div className="big-cart-item__btns-block">
 									<button
-										className="mini-cart-item__minus-btn"
+										className="big-cart-item__minus-btn"
 										onClick={() => minusProductToCart(id)}
 									>
-										<svg className="mini-cart-item__btn-svg" width="10" height="1px">
-											<rect x="15" y="0.5" width="1" height="15" rx="0.5" transform="rotate(90 15 0.5)"/>
+										<svg className="big-cart-item__btn-svg" width="8px" height="2px">
+											<use href="icons.svg#minus-big-cart"></use>
 										</svg>
 									</button>
 
@@ -43,18 +43,15 @@ function Cart({cart, plusProductToCart, deleteProduct, minusProductToCart, count
 
 									<button
 										onClick={() => { plusProductToCart(id) } }
-										className="mini-cart-item__plus-btn"
+										className="big-cart-item__plus-btn"
 									>
-										<svg className="mini-cart-item__btn-svg" viewBox="0 0 15 15" width="10px" height="10px">
-											<rect x="7" y="0.5" width="1" height="15" rx="0.5" fill="#898989"/>
-											<rect x="15" y="7.5" width="1" height="15" rx="0.5" transform="rotate(90 15 7.5)"/>
+										<svg className="big-cart-item__btn-svg" viewBox="0 0 10 10" width="8px" height="8px">
+											<use href="icons.svg#plus-big-cart"></use>
 										</svg>
 									</button>
 								</div>
 
-								<div className="big-cart-item__total-price-block">
-									<span className="big-cart-item__total-price">{price * count} ₽</span>
-								</div>
+								<div className="big-cart-item__total-price-block">{price * count} ₽</div>
 
 								<div className="big-cart-item__delete-btn-block">
 									<button
@@ -75,26 +72,32 @@ function Cart({cart, plusProductToCart, deleteProduct, minusProductToCart, count
 
 					{cart.length === 0 ?
 						<div className="mini-cart_empty">Корзина пуста</div> :
-						<div className="big-cart-bottom">
-							<div className="mini-cart-bottom">
-								<div className="mini-cart-bottom__item">
-									<span className="mini-cart-bottom__item-title">Доставка:</span>
-									<span className="mini-cart-bottom__item-value">0 ₽</span>
+						<div>
+							<div className="big-cart-side">
+
+								<div className="big-cart-side-title">Ваш заказ</div>
+
+								<div className="big-cart-bottom">
+									<div className="big-cart-bottom__item">
+										<span className="big-cart-bottom__item-title">Доставка:</span>
+										<span className="big-cart-bottom__item-value">0 ₽</span>
+									</div>
+
+									<div className="big-cart-bottom__item">
+										<span className="big-cart-bottom__item-title">Время доставки:</span>
+										<span className="big-cart-bottom__item-value">0 мин.</span>
+									</div>
+
+									<div className="big-cart-bottom__item">
+										<span className="big-cart-bottom__price-title">Итого:</span>
+										<span className="big-cart-bottom__price">{countTotalPrice()} ₽</span>
+									</div>
 								</div>
 
-								<div className="mini-cart-bottom__item">
-									<span className="mini-cart-bottom__item-title">Время доставки:</span>
-									<span className="mini-cart-bottom__item-value">0 мин.</span>
-								</div>
-
-								<div className="mini-cart-bottom__item">
-									<span className="mini-cart-bottom__price-title">Итого:</span>
-									<span className="mini-cart-bottom__price">{countTotalPrice()} ₽</span>
-								</div>
+								<button className="big-cart__buy">Перейти к оплате</button>
 							</div>
-
-							<button className="mini-cart__buy">К оплате</button>
 						</div>
+
 					}
 				</div>
 			</div>

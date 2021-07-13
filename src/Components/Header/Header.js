@@ -23,7 +23,12 @@ function Header() {
 
 						<ul className="nav__side">
 							<Link to="/auth" className="nav__side-item">Войти</Link>
-							<Link to="/cart" className="nav__side-item">Корзина</Link>
+							<Link to="/cart" className="nav__side-item">
+								<svg className="nav__side-item-cart" width="20" height="20">
+                  <use href="icons.svg#cart"></use>
+                </svg>
+								Корзина
+							</Link>
 						</ul>
 					</nav>
 
