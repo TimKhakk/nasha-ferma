@@ -1,0 +1,29 @@
+.footer-middle {
+  padding: 40px 0;
+  border-bottom: 1px solid $light-secondary-color;
+}
+
+.footer-middle__row {
+  display: grid;
+  grid-template-columns: 175px 160px 1fr;
+  gap: 75px;
+}
+
+.footer__middle-item {
+  display: flex;
+  flex-direction: column;
+
+  &:last-child {
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+}
+
+.footer__middle-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__middle-title {
+  margin-bottom: 25px;
+}

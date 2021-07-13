@@ -7,6 +7,7 @@ import Homepage from './Components/Homepage/Homepage';
 import Products from './Components/Products/Products';
 import Cart     from './Components/Cart/Cart';
 import Auth     from './Components/Auth/Auth';
+import Footer   from './Components/Footer/Footer';
 
 import { data } from './data';
 import { useState } from "react";
@@ -126,6 +127,8 @@ function App() {
 				</Route>
 
 				<Route path="/auth"     component={Auth}/>
+
+				<Footer />
 
 			</Router>
 		</div>

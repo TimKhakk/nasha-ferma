@@ -1,0 +1,17 @@
+
+.footer {
+  background: $secondary-color;
+  margin-top: 50px;
+
+  &__top {
+    border-bottom: 1px solid $light-secondary-color;
+    padding: 40px 0;
+  }
+
+  &__top-row {
+    display: grid;
+    grid-template-columns: 1fr 140px 140px;
+    grid-template-rows: 1fr;
+    gap: 27px;
+  }
+}

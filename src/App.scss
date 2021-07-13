@@ -8,7 +8,6 @@
 @import "Styles/Header/header.scss";
 
 /* Homepage */
-/*@import "Styles/Homepage/homepage.scss";*/
 @import "Styles/Homepage/homepage-main.scss";
 
 
@@ -22,3 +21,8 @@
 
 /* Cart page */
 @import "Styles/Cart/cart.scss";
+
+/* Footer */
+@import "Styles/Footer/footer.scss";
+@import "Styles/Footer/footer-middle.scss";
+@import "Styles/Footer/footer-bottom.scss";
