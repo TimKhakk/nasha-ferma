@@ -25,3 +25,11 @@
     height: 49px;
   }
 }
+
+
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+  .footer {
+    display: none;
+  }
+}

@@ -21,7 +21,6 @@
 	</symbol>
 
 	<!-- Человек -->
-
 	<symbol width="20" height="20" viewBox="0 0 20 20" fill="none" id="person" xmlns="http://www.w3.org/2000/svg">
 		<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="12" width="14" height="7">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M3.33325 12.0801H16.5332V18.2251H3.33325V12.0801Z" fill="white"/>
@@ -132,13 +131,27 @@
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M13.807 5.533a1.904 1.904 0 01-1.86-1.525l-.193-.963c-.04-.146-.207-.274-.397-.274H8.006a.419.419 0 00-.406.31l-.184.927a1.903 1.903 0 01-1.86 1.525.594.594 0 010-1.187c.337 0 .63-.241.696-.572l.192-.963c.196-.737.835-1.227 1.562-1.227h3.35c.728 0 1.366.49 1.554 1.192l.201.998a.713.713 0 00.696.572.594.594 0 010 1.187z" fill="#474747"></path>
 	</symbol>
 
+	<!-- Минус в корзине-->
 	<symbol id="minus-big-cart" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M1 0C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2V0ZM9 2C9.55229 2 10 1.55228 10 1C10 0.447715 9.55229 0 9 0V2ZM1 2H9V0H1V2Z" fill="#272526"/>
 	</symbol>
 
+	<!-- Плюс в корзине-->
 	<symbol id="plus-big-cart" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M6 1C6 0.447715 5.55228 2.71588e-08 5 0C4.44772 -2.71588e-08 4 0.447715 4 1L6 1ZM4 9C4 9.55228 4.44771 10 5 10C5.55228 10 6 9.55228 6 9L4 9ZM4 1L4 9L6 9L6 1L4 1Z" fill="#14142B"/>
 		<path d="M1 4C0.447715 4 0 4.44772 0 5C0 5.55228 0.447715 6 1 6V4ZM9 6C9.55229 6 10 5.55228 10 5C10 4.44772 9.55229 4 9 4V6ZM1 6H9V4H1V6Z" fill="#14142B"/>
 	</symbol>
+
+	<!-- Burger -->
+	<symbol id="burger" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M3 17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17C21 16.4477 20.5523 16 20 16H4C3.44772 16 3 16.4477 3 17ZM3 12C3 12.5523 3.44772 13 4 13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11H4C3.44772 11 3 11.4477 3 12ZM4 6C3.44772 6 3 6.44772 3 7C3 7.55228 3.44772 8 4 8H20C20.5523 8 21 7.55228 21 7C21 6.44772 20.5523 6 20 6H4Z" fill="black"/>
+	</symbol>
+
+	<!-- Cross -->
+	<symbol id="cross" width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M17.6569 17.6702L6.34319 6.35652" stroke="black" stroke-width="2" stroke-linecap="round"/>
+		<path d="M17.6568 6.35652L6.34311 17.6702" stroke="black" stroke-width="2" stroke-linecap="round"/>
+	</symbol>
+
 
 </svg>

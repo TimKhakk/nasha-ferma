@@ -13,8 +13,26 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 button {
     cursor: pointer;
     border: none;
+    background: transparent;
     font-family: 'Gilroy', sans-serif;
+}
+
+.disabled {
+    color: grey;
+    cursor: not-allowed;
+}
+
+
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+    .app {
+        margin-top: 58px;
+    }
 }

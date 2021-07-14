@@ -4,9 +4,10 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: $breakpoints-xl) {
     .container {
-        width: calc(100% - 16px);
+        // width: calc(100% - 32px);
+        width: 100%;
         padding: 0 16px;
         margin: 0;
     }
