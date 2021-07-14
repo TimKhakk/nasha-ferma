@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Header() {
+
+	const [ isActive, setActive ] = useState(false);
+
+	const toggleMenu = () => setActive(prevState => !prevState);
+
 	return (
 		<header className="header">
 
@@ -8,7 +14,7 @@ function Header() {
 
 				<div className="header__row">
 
-					<svg className="header__burger"  width="24" height="24">
+					<svg onClick={toggleMenu} className="header__burger"  width="24" height="24">
 						<use href="icons.svg#burger"></use>
 					</svg>
 
@@ -18,19 +24,19 @@ function Header() {
 					</div>
 
 					<nav className="nav">
-						<ul className="nav__menu">
+						<ul className={isActive ? "nav__menu nav__menu_active" : "nav__menu"}>
 
 							<div class="nav-menu-sm-top">
 								<button class="nav-menu-sm-top__close">
 
-									<svg className="nav-menu-sm-top__close-svg"  width="24" height="24">
+									<svg onClick={toggleMenu} className="nav-menu-sm-top__close-svg"  width="24" height="24">
 										<use href="icons.svg#cross"></use>
 									</svg>
 
 								</button>
 
 								<div class="logo">
-									<Link to="/">Наша ферма</Link>
+									<Link onClick={toggleMenu} to="/">Наша ферма</Link>
 								</div>
 							</div>
 
@@ -40,11 +46,11 @@ function Header() {
 									<use href="icons.svg#person"></use>
 								</svg>
 
-								<p class="nav-menu-sm-auth__title">Войти</p>
+								<span class="nav-menu-sm-auth__title">Войти</span>
 
 							</Link>
 
-							<Link to="/products" className="nav__menu-item">Продукты</Link>
+							<Link to="/products" onClick={isActive ? toggleMenu : ""} className="nav__menu-item">Продукты</Link>
 							<li className="nav__menu-item disabled">Курьерам</li>
 							<li className="nav__menu-item disabled">О компании</li>
 							<li className="nav__menu-item disabled">Фермерам</li>
@@ -55,7 +61,7 @@ function Header() {
 								<svg className="nav__side-item-auth"  width="20" height="20">
 									<use href="icons.svg#person"></use>
 								</svg>
-								<span className="nav__side-item-auth-title">Войти</span>
+								<span onClick={isActive ? toggleMenu : ""} className="nav__side-item-auth-title">Войти</span>
 							</Link>
 							<Link to="/cart" className="nav__side-item">
 								<svg className="nav__side-item-cart" width="20" height="20">
@@ -69,6 +75,7 @@ function Header() {
 				</div>
 
 			</div>
+			<div onClick={isActive ? toggleMenu : ""} className={`shadow ${isActive ? "active" : ""}`}></div>
 		</header>
 	);
 }
