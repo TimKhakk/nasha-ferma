@@ -14,3 +14,26 @@
     gap: 12px;
   }
 }
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
+  .footer-bottom {
+    padding: 20px 0;
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__rights {
+      font-size: 12px;
+    }
+
+    &__media {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

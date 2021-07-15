@@ -17,10 +17,10 @@
     line-height: 37px;
     cursor: pointer;
     transition: color .2s;
-}
 
-.logo a:hover {
-    color: $dark-primary-color;
+    &:hover {
+        color: $dark-primary-color;
+    }
 }
 
 
@@ -95,24 +95,22 @@
     display: none;
 }
 .shadow {
-    display: block;
+    display: none;
     background: transparent;
     position: fixed;
-    z-index: -10;
+    z-index: 10;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    transition: .2s;
-    transition-delay: .1s;
 }
 .shadow.active {
-    z-index: 10;
+    display: block;
     background: rgba(0, 0, 0, 0.4);
 }
 
-// 0 - 576px
-@media screen and (max-width: $breakpoints-sm) {
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
     .header {
         padding: 12px 0;
         border-bottom: 1px solid #f3f3f3;

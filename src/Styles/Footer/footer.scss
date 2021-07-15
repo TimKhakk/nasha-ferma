@@ -27,9 +27,25 @@
 }
 
 
-// 0 - 576px
-@media screen and (max-width: $breakpoints-sm) {
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
   .footer {
-    display: none;
+    display: block;
+
+    &-logo {
+      grid-column: span 2;
+      justify-self: center;
+    }
+    &__top {
+      padding: 20px 0;
+    }
+    &__top-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 24px 49px;
+      justify-content: center;
+      row-gap: 25px;
+      column-gap: 15px
+    }
   }
 }

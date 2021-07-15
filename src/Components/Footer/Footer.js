@@ -28,80 +28,80 @@ export default function Footer() {
         <div className="container">
           <div className="footer-middle__row">
 
-            <div className="footer__middle-item">
-              <h3 className="footer__middle-title">Продукты</h3>
-              <ul className="footer__middle-list">
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Овощи</a>
+            <div className="footer-middle__item">
+              <h3 className="footer-middle__title">Продукты</h3>
+              <ul className="footer-middle__list">
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Овощи</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Фрукты</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Фрукты</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Ягоды</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Ягоды</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Молочные продукты</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Молочные продукты</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Мёд и варенье</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Мёд и варенье</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Яйца</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer__middle-item">
-              <h3 className="footer__middle-title">Регионы</h3>
-              <ul className="footer__middle-list">
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Москва</a>
-                </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Санкт-Петербург</a>
-                </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Алабушево</a>
-                </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Алапаевск</a>
-                </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Алейск</a>
-                </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Показать все ></a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Яйца</a>
                 </li>
               </ul>
             </div>
 
-            <div className="footer__middle-item">
-              <h3 className="footer__middle-title">О компании</h3>
-              <ul className="footer__middle-list">
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Фермерам</a>
+            <div className="footer-middle__item">
+              <h3 className="footer-middle__title">Регионы</h3>
+              <ul className="footer-middle__list">
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Москва</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Курьерам</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Санкт-Петербург</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Контакты</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Алабушево</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Доставка</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Алапаевск</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Пользовательское соглашение</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Алейск</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Стать партнёром</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Показать все ></a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Стать курьером</a>
+              </ul>
+            </div>
+
+            <div className="footer-middle__item">
+              <h3 className="footer-middle__title">О компании</h3>
+              <ul className="footer-middle__list">
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Фермерам</a>
                 </li>
-                <li className="footer__main-li">
-                  <a href="#" className="footer__main-link">Переработка пластика</a>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Курьерам</a>
+                </li>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Контакты</a>
+                </li>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Доставка</a>
+                </li>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Пользовательское соглашение</a>
+                </li>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Стать партнёром</a>
+                </li>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Стать курьером</a>
+                </li>
+                <li className="footer-middle__li">
+                  <a href="#" className="footer-middle__link">Переработка пластика</a>
                 </li>
               </ul>
             </div>

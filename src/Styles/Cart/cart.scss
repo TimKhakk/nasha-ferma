@@ -165,3 +165,11 @@
   background: transparent;
   border: 1px solid $light-grey-color;
 }
+
+
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
+  .cart-row {
+    grid-template-columns: 100%;
+  }
+}

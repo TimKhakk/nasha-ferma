@@ -1,5 +1,4 @@
 .breadcrumbs {
-
     font-size: 14px;
     line-height: 17px;
     font-weight: 500;
@@ -22,3 +21,12 @@
 .breadcrumb__arrow {
     margin: 0 10px;
 }
+
+
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
+    .breadcrumbs {
+      margin-bottom: 12px;
+      padding: 10px 0;
+    }
+  }
