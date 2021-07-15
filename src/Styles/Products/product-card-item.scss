@@ -94,3 +94,16 @@
 .product-card-item__plus-btn-svg {
     fill: #0BA360;
 }
+
+
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
+    .product-card-item {
+        padding: 12px;
+        height: 270px;
+
+        &__btns-block {
+            margin: 0;
+        }
+    }
+  }

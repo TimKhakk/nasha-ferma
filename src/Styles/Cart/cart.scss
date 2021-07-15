@@ -13,10 +13,13 @@
 }
 
 .big-cart-side {
-  display: grid;
+  display: flex;
   padding-bottom: 20px;
-  border: 1px solid $light-secondary-color;
+  border: 1px solid #E9E9E9;
   border-radius: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: min-content;
 }
 
 .big-cart-side-title {
@@ -165,6 +168,13 @@
   background: transparent;
   border: 1px solid $light-grey-color;
 }
+
+.big-cart-item__total-price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
 
 
 // 0 - $working-breakpoint

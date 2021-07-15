@@ -4,3 +4,13 @@
     grid-template-columns: 25fr 50fr 25fr;
     gap: 40px;
 }
+
+
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
+    .products__row {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content min-content;
+        gap: 20px;
+    }
+  }

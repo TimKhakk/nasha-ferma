@@ -41,3 +41,12 @@
 .mini-cart-bottom__price {
     color: black;
 }
+
+
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
+    .mini-cart-bottom {
+        display: none;
+    }
+
+}

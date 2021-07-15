@@ -46,7 +46,7 @@ function Header() {
 									<use href="icons.svg#person"></use>
 								</svg>
 
-								<span class="nav-menu-sm-auth__title">Войти</span>
+								<span onClick={isActive ? toggleMenu : ""} class="nav-menu-sm-auth__title">Войти</span>
 
 							</Link>
 
