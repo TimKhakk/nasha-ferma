@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Footer() {
+export default function Footer({changeCategory}) {
 	return (
 		<footer className="footer">
 
@@ -29,25 +29,25 @@ export default function Footer() {
           <div className="footer-middle__row">
 
             <div className="footer-middle__item">
-              <h3 className="footer-middle__title">Продукты</h3>
+              <Link to="/products" className="footer-middle__title">Продукты</Link>
               <ul className="footer-middle__list">
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Овощи</a>
+                  <Link to="/products" onClick={() => changeCategory('Овощи')} className="footer-middle__link">Овощи</Link>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Фрукты</a>
+                  <Link to="/products" onClick={() => changeCategory('Фрукты')} className="footer-middle__link">Фрукты</Link>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Ягоды</a>
+                  <Link to="/products" onClick={() => changeCategory('Ягоды')} className="footer-middle__link">Ягоды</Link>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Молочные продукты</a>
+                  <Link to="/products" onClick={() => changeCategory('Молочные продукты')} className="footer-middle__link">Молочные продукты</Link>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Мёд и варенье</a>
+                  <Link to="/products" onClick={() => changeCategory('Мёд и варенье')} className="footer-middle__link">Мёд и варенье</Link>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Яйца</a>
+                  <Link to="/products" onClick={() => changeCategory('Яйца')} className="footer-middle__link">Яйца</Link>
                 </li>
               </ul>
             </div>

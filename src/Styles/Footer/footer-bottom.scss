@@ -17,7 +17,7 @@
 // 0 - $working-breakpoint
 @media screen and (max-width: $working-breakpoint) {
   .footer-bottom {
-    padding: 20px 0;
+    padding: 20px 0 66px;
 
     &__row {
       display: flex;

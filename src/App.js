@@ -95,7 +95,7 @@ function App() {
 	const countTotalPrice = () => cart.reduce((sum, item) => sum + (item.price * item.count), 0); // Считаем всю сумму
 
 	return (
-		<div className={cart.length === 0 ? "app" : "app app_sm-cart"}>
+		<div className="app">
 			<Router>
 
 				<Header/>
@@ -128,7 +128,7 @@ function App() {
 
 				<Route path="/auth"     component={Auth}/>
 
-				<Footer />
+				<Footer changeCategory={changeCategory}/>
 
 			</Router>
 		</div>
