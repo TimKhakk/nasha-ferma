@@ -5,13 +5,13 @@ function ProductCards({cart, plusProductToCart, minusProductToCart, addProductTo
 		return groups.map(group => {
 			const groupedProducts = categoriedProducts.filter(item => item.group === group);
 			return (
-				<div className="product-card">
+				<div key={group} className="product-card">
 					<h4 className="product-card__title">{group}</h4>
 
 					<div className="product-card__items">
 						{groupedProducts.map(({ id, name, price, weight, imgUrl}) => {
 							return (
-								<div className="product-card-item">
+								<div key={id} className="product-card-item">
 									<div className="product-card-item__img-block">
 										<img src={imgUrl} alt={name} className="product-card-item__img"/>
 									</div>
@@ -42,7 +42,7 @@ function ProductCards({cart, plusProductToCart, minusProductToCart, addProductTo
 													<rect x="7" y="0.5" width="1" height="15" rx="0.5" fill="#0BA360"/>
 													<rect x="15" y="7.5" width="1" height="15" rx="0.5" fill="#0BA360" transform="rotate(90 15 7.5)"/>
 												</svg>
-											</button></div> :
+										</button></div> :
 										<button
 											key={id}
 											className="product-card-item__btn-add-to-cart"

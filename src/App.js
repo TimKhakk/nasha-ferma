@@ -2,6 +2,7 @@ import './App.scss';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import { data } from './data';
 import { useState } from "react";
+import firebase from "firebase";
 
 // Components
 import Header   from './Components/Header/Header';
@@ -27,6 +28,8 @@ function App() {
 			return category
 		})
 	}
+
+	console.log(firebase);
 
 	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
 	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
