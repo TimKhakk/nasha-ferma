@@ -1,8 +1,6 @@
 
 function ProductCards({cart, plusProductToCart, minusProductToCart, addProductToCart, categoriedProducts, groups}) {
 
-	console.table(categoriedProducts);
-
 	const renderproducts = () => {
 		return groups.map(group => {
 			const groupedProducts = categoriedProducts.filter(item => item.group === group);

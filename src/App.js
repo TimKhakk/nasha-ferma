@@ -1,5 +1,7 @@
 import './App.scss';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { data } from './data';
+import { useState } from "react";
 
 // Components
 import Header   from './Components/Header/Header';
@@ -8,10 +10,6 @@ import Products from './Components/Products/Products';
 import Cart     from './Components/Cart/Cart';
 import Auth     from './Components/Auth/Auth';
 import Footer   from './Components/Footer/Footer';
-
-import { data } from './data';
-import { useState } from "react";
-
 
 function App() {
 	const getCartLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];

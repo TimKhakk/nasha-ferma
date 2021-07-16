@@ -56,22 +56,26 @@ export default function Footer({changeCategory}) {
               <h3 className="footer-middle__title">Регионы</h3>
               <ul className="footer-middle__list">
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Москва</a>
+                  <span className="footer-middle__link">Москва</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Санкт-Петербург</a>
+                  <span className="footer-middle__link">Санкт-Петербург</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Алабушево</a>
+                  <span className="footer-middle__link">Алабушево</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Алапаевск</a>
+                  <span className="footer-middle__link">Алапаевск</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Алейск</a>
+                  <span className="footer-middle__link">Алейск</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Показать все ></a>
+                  <span className="footer-middle__link">Показать все
+                    <svg className="breadcrumb__arrow" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="icons.svg#breadcrumb-arrow"></use>
+                    </svg>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -80,28 +84,28 @@ export default function Footer({changeCategory}) {
               <h3 className="footer-middle__title">О компании</h3>
               <ul className="footer-middle__list">
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Фермерам</a>
+                  <span className="footer-middle__link">Фермерам</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Курьерам</a>
+                  <span className="footer-middle__link">Курьерам</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Контакты</a>
+                  <span className="footer-middle__link">Контакты</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Доставка</a>
+                  <span className="footer-middle__link">Доставка</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Пользовательское соглашение</a>
+                  <span className="footer-middle__link">Пользовательское соглашение</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Стать партнёром</a>
+                  <span className="footer-middle__link">Стать партнёром</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Стать курьером</a>
+                  <span className="footer-middle__link">Стать курьером</span>
                 </li>
                 <li className="footer-middle__li">
-                  <a href="#" className="footer-middle__link">Переработка пластика</a>
+                  <span className="footer-middle__link">Переработка пластика</span>
                 </li>
               </ul>
             </div>
