@@ -1,0 +1,128 @@
+[
+	{
+		"id": 2,
+		"name": "Огурец гладкий среднеплодный",
+		"price": 79,
+		"weight": 1000,
+		"category": "Овощи",
+		"group": "Огурцы",
+		"imgUrl": "https://api.magonline.ru/thumbnail/370x370/12/290/12290.png"
+	},
+	{
+		"id": 3,
+		"name": "Огурец Малика",
+		"price": 549,
+		"weight": 1000,
+		"category": "Овощи",
+		"group": "Огурцы",
+		"imgUrl": "https://quality-seeds.ru/upload/iblock/525/525f7901cd097b76617d2151491cd1fe.png"
+	},
+	{
+		"id": 4,
+		"name": "Огурец сладкий",
+		"price": 149,
+		"weight": 1000,
+		"category": "Овощи",
+		"group": "Огурцы",
+		"imgUrl": "https://profpacket.ru/wp-content/uploads/2018/04/ogurci_b.png"
+	},
+	{
+		"id": 5,
+		"name": "Огурец Зозуля",
+		"price": 99,
+		"weight": 1000,
+		"category": "Овощи",
+		"group": "Огурцы",
+		"imgUrl": "https://aroma-profi.ru/upload/iblock/36c/36c7320ab9063306eabcfe9e4c05018d.png"
+	},
+	{
+		"id": 6,
+		"name": "Соленья Рязани",
+		"price": 29,
+		"weight": 1000,
+		"category": "Овощи",
+		"group": "Огурцы",
+		"imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVmu2NjuuVlK498ymzFHWGL3rhRLS6JuyERw&usqp=CAU"
+	},
+	{
+		"id": 7,
+		"name": "Томато",
+		"price": 79,
+		"weight": 1000,
+		"category": "Овощи",
+		"group": "Томаты",
+		"imgUrl": "http://tknso.ru/images/teplica-catalog-555x417_1/item/cbf4rzcxwj.png"
+	},
+	{
+		"id": 11,
+		"name": "Розовые помидоры",
+		"price": 69,
+		"weight": 1000,
+		"category": "Овощи",
+		"group": "Томаты",
+		"imgUrl": "https://imgproxy.sbermarket.ru/imgproxy/size-500-500/aHR0cHM6Ly9zYmVybWFya2V0LnJ1L3NwcmVlL3Byb2R1Y3RzLzE1NjA0MDMvb3JpZ2luYWwvMTk3MzgxXzEucG5nPzE2MDc4NTg0MjQ.png"
+	},
+	{
+		"id": 12,
+		"name": "Сыр Сметанковый",
+		"price": 679,
+		"weight": 100,
+		"category": "Молочные продукты",
+		"group": "Сыры",
+		"imgUrl": "https://zakaz.spar-kaliningrad.ru/upload/iblock/dda/dda70ce4ef56543ab18012e42717dc18.png"
+	},
+	{
+		"id": 13,
+		"name": "Сыр Зигеркейз",
+		"price": 559,
+		"weight": 100,
+		"category": "Молочные продукты",
+		"group": "Сыры",
+		"imgUrl": "https://cheese-home.com//files/materials/рецепты/монтерей%20джек/jack.png"
+	},
+	{
+		"id": 14,
+		"name": "Российский сыр",
+		"price": 149,
+		"weight": 100,
+		"category": "Молочные продукты",
+		"group": "Сыры",
+		"imgUrl": "http://cheasy.ru/img/cms/российский.png"
+	},
+	{
+		"id": 15,
+		"name": "Сыр Рокфор",
+		"price": 379,
+		"weight": 100,
+		"category": "Молочные продукты",
+		"group": "Сыры",
+		"imgUrl": "https://vincenzo-pizza.com.ua/userfiles/additives/20200614110315kisspng_blue_cheese_milk_goat_cheese_roquefort_5b08c4d89d29515864376615273013366438.png.pagespeed.ce.gA4sknRj_r.png"
+	},
+	{
+		"id": 16,
+		"name": "Голубика",
+		"price": 69,
+		"weight": 100,
+		"category": "Ягоды",
+		"group": "Ягоды",
+		"imgUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsupermalina.ru%2Fwp-content%2Fuploads%2F2018%2F03%2Fgolubika.png&f=1&nofb=1"
+	},
+	{
+		"id": 17,
+		"name": "Клубника",
+		"price": 79,
+		"weight": 100,
+		"category": "Ягоды",
+		"group": "Ягоды",
+		"imgUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F53%2F82%2F0b%2F53820b4fc40ce49844c59ae532188459.png&f=1&nofb=1"
+	},
+	{
+		"id": 18,
+		"name": "Малина",
+		"price": 89,
+		"weight": 100,
+		"category": "Ягоды",
+		"group": "Ягоды",
+		"imgUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.stollerukraine.com.ua%2Fassets%2Fimages%2Fmalina-prod.png&f=1&nofb=1"
+	}
+]

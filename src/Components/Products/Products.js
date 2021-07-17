@@ -3,7 +3,18 @@ import Categories   from "./Categories";
 import ProductCards from "./ProductCards";
 import MiniCart     from "./MiniCart";
 
-function products({products, cart, plusProductToCart, deleteProduct, minusProductToCart, addProductToCart, countTotalPrice, categoriedProducts, groups, changeCategory}) {
+function products({
+		products,
+		cart,
+		plusProductToCart,
+		deleteProduct,
+		minusProductToCart,
+		addProductToCart,
+		countTotalPrice,
+		categoriedProducts,
+		groups,
+		changeCategory
+	}) {
 
 	return (
 		<div className="products">
