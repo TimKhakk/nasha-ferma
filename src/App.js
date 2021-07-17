@@ -2,7 +2,14 @@ import './App.scss';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import { data } from './data';
 import { useState } from "react";
-import firebase from "firebase";
+// Add the Firebase products that you want to use
+import firebase from 'firebase';
+
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { useCollectionData } from 'react-firebase-hooks/firestore';
+
+import "firebase/auth";
+import "firebase/firestore";
 
 // Components
 import Header   from './Components/Header/Header';
@@ -11,6 +18,20 @@ import Products from './Components/Products/Products';
 import Cart     from './Components/Cart/Cart';
 import Auth     from './Components/Auth/Auth';
 import Footer   from './Components/Footer/Footer';
+
+// const auth = firebase.auth();
+// const firestore = firebase.firestore();
+
+firebase.initializeApp({
+	apiKey: "AIzaSyBQaJY878XMgqk8LA0Z87D9tTe2j9xtYaQ",
+	authDomain: "nasha-ferma.firebaseapp.com",
+	projectId: "nasha-ferma",
+	storageBucket: "nasha-ferma.appspot.com",
+	messagingSenderId: "811210513196",
+	appId: "1:811210513196:web:598a5823230024985dea89"
+});
+
+console.log(firebase);
 
 function App() {
 	const getCartLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
@@ -29,7 +50,6 @@ function App() {
 		})
 	}
 
-	console.log(firebase);
 
 	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
 	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
