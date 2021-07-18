@@ -1,10 +1,10 @@
 .container {
-    width: 1300px;
+    width: 1290px;
     margin: 0 auto;
 }
 
 
-@media screen and (max-width: $breakpoints-xl) {
+@media screen and (max-width: 1330px) {
     .container {
         // width: calc(100% - 32px);
         width: 100%;

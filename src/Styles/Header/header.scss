@@ -112,8 +112,28 @@
     background: rgba(0, 0, 0, 0.4);
 }
 
-// 0 - $working-breakpoint
-@media screen and (max-width: $working-breakpoint) {
+// 576px - 992px
+@media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-lg) {
+    .nav {
+        &__menu {
+            width: 30%;
+        }
+    }
+
+}
+
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+    .nav {
+        &__menu {
+            width: 70%;
+        }
+    }
+
+}
+
+// 0 - 992px
+@media screen and (max-width: $breakpoints-lg) {
     .header {
         padding: 12px 0;
         border-bottom: 1px solid #f3f3f3;
@@ -144,7 +164,6 @@
             justify-content: flex-start;
             flex-direction: column;
             display: flex;
-            width: 70%;
             position: fixed;
             overflow-x: hidden;
             gap: 0;

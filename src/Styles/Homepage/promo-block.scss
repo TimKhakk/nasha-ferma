@@ -1,0 +1,9 @@
+.promo-block {
+
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+}

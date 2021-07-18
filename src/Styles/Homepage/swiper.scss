@@ -1,0 +1,47 @@
+
+.swiper {
+  &-container {
+    width: 100%;
+  }
+  &-wrapper {
+    width: 100%;
+    .green {
+      background: linear-gradient(73.27deg, #00E3AE 4.94%, #4EE285 37.76%, #9BE15D 98.57%);
+    }
+    .red {
+      background: linear-gradient(73.29deg, #FC6076 0%, #FD7C5E 38.18%, #FF9A44 98.9%);
+    }
+    .yellow {
+      background: linear-gradient(72.76deg, #FF6100 -1.22%, #FEE140 100%);
+    }
+    .blue {
+      background: linear-gradient(73.25deg, #549DE1 0%, #7DE2FC 98.95%);
+    }
+  }
+
+  &-slide {
+    width: 374px !important;
+    height: 210px !important;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+    justify-content: space-between;
+    position: relative;
+    color: white;
+  }
+}
+
+// 0 - 576px
+@media screen and (max-width: $breakpoints-lg) {
+  .swiper {
+
+    &-container {
+      width: calc(100% + 16px);
+    }
+    &-slide {
+      width: 40% !important;
+      height: 210px !important;
+    }
+  }
+}

@@ -1,20 +1,25 @@
 .homepage-main {
     width: 100%;
     height: 350px;
-    border-radius: 20px;
     display: flex;
-    padding-left: 10%;
     align-items: center;
+    position: relative;
 
-    /*Поменять на картинку!!! */
-    background: $dark-primary-color;
-}
-.homepage-main__title {
-    color: white;
-    font-size: 48px;
-    font-weight: bold;
-}
+    &__main-img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 100%;
+        border-radius: 20px;
+    }
 
+    &__title {
+        left: 7%;
+        position: absolute;
+        color: white;
+        font-size: 48px;
+        font-weight: bold;
+    }
+}
 
 // 0 - 576px
 @media screen and (max-width: $breakpoints-sm) {
@@ -34,4 +39,4 @@
         line-height: 30px;
         font-weight: bold;
     }
-  }
+}

@@ -30,8 +30,8 @@ button {
 }
 
 
-// 0 - 576px
-@media screen and (max-width: $breakpoints-sm) {
+// 0 - 992px
+@media screen and (max-width: $breakpoints-lg) {
     .app {
         margin-top: 58px;
     }
