@@ -3,14 +3,15 @@ import Logo from '../Default/Logo';
 import Container    from '../Default/Container';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 
 function Header() {
 
 	const [ isActive, setActive ] = useState(false);
 
-	const openMenu = () => setActive(prevState => true);
-	const closeMenu = () => setActive(prevState => false);
+	const openMenu = () => setActive(true);
+	const closeMenu = () => setActive(false);
 
 	return (
 		<header className="header">
@@ -65,7 +66,7 @@ function Header() {
 				</div>
 
 			</Container>
-			<div onClick={closeMenu} className={`shadow ${isActive ? "active" : ""}`}></div>
+			{isActive && <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0, transition: .2}} onClick={closeMenu} className={`shadow active`} />}
 		</header>
 	);
 }
