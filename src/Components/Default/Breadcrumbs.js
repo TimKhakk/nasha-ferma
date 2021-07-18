@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import Container from '../Default/Container';
 
 function Breadcrumbs({paths, name}) {
 	return (
 		<>
 			<div className="breadcrumbs">
-				<div className="container">
+				<Container>
 
 					<div className="breadcrumbs-body">
 
@@ -24,7 +25,7 @@ function Breadcrumbs({paths, name}) {
 						<span className="breadcrumb_disabled">{name}</span>
 					</div>
 
-				</div>
+				</Container>
 			</div>
 		</>
 	);

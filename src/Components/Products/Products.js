@@ -1,7 +1,9 @@
 import Breadcrumbs  from '../Default/Breadcrumbs';
+import Container    from '../Default/Container';
 import Categories   from "./Categories";
 import ProductCards from "./ProductCards";
 import MiniCart     from "./MiniCart";
+// import { motion } from 'framer-motion';
 
 function products({
 		products,
@@ -21,9 +23,11 @@ function products({
 
 			<Breadcrumbs name={"Продукты"} />
 
-			<div className="container">
+			<Container>
 
-				<div className="products__row">
+				<div
+					className="products__row"
+				>
 
 					<Categories
 						products={products}
@@ -49,7 +53,7 @@ function products({
 					/>
 
 				</div>
-			</div>
+			</Container>
 		</div>
 	);
 }

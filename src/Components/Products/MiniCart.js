@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function Categories({cart, plusProductToCart, deleteProduct, minusProductToCart, countTotalPrice}) {
 	return (
@@ -9,7 +10,13 @@ function Categories({cart, plusProductToCart, deleteProduct, minusProductToCart,
 
 				{cart.map(({ id, name, price, count, weight }) => {
 					return (
-						<div key={id} className="mini-cart-item">
+						<motion.div
+							layout key={id}
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ delay: 0.2 }}
+							className="mini-cart-item"
+						>
 							<p className="mini-cart-item__title">{name}, {weight >= 1000 ? <>{weight / 1000} кг</> : <>{weight} г</>}</p>
 
 							<span className="mini-cart-item__total-price">{price * count} ₽</span>
@@ -46,12 +53,17 @@ function Categories({cart, plusProductToCart, deleteProduct, minusProductToCart,
 							</button>
 
 							<span className="mini-cart-item__price">{price} ₽</span>
-						</div>
+						</motion.div>
 					)
 				})}
 
 				{cart.length === 0 ?
-					<div className="mini-cart_empty">
+					<motion.div
+						layout
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						className="mini-cart_empty"
+					>
 						<svg width="66" height="65" viewBox="0 0 66 65" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fillRule="evenodd" clipRule="evenodd" d="M13.5648 18.1291L15.5245 41.4381C15.6675 43.2321 17.1333 44.5776 18.924 44.5776H18.937H54.3978H54.4043C56.0975 44.5776 57.5438 43.3166 57.7843 41.6428L60.8718 20.3261C60.9433 19.8191 60.8165 19.3121 60.5078 18.9026C60.2023 18.4898 59.7538 18.2233 59.2468 18.1518C58.5675 18.1778 30.3803 18.1388 13.5648 18.1291V18.1291ZM18.9174 49.4525C14.6372 49.4525 11.0134 46.1115 10.6657 41.8377L7.68868 6.43222L2.79093 5.58722C1.46168 5.35322 0.574429 4.09547 0.801929 2.76622C1.03593 1.43697 2.31968 0.572467 3.61968 0.780467L10.3797 1.95047C11.4684 2.14222 12.2972 3.04572 12.3914 4.15072L13.1552 13.254C59.5522 13.2735 59.7017 13.2962 59.9259 13.3222C61.7362 13.5855 63.3287 14.5312 64.4142 15.9872C65.4997 17.44 65.9547 19.2307 65.6947 21.0247L62.6104 42.3382C62.0287 46.3942 58.5057 49.4525 54.4107 49.4525H54.3944H18.9434H18.9174Z" fill="#9F9F9F"/>
 							<path fillRule="evenodd" clipRule="evenodd" d="M49.1845 30.142H40.1755C38.8268 30.142 37.738 29.05 37.738 27.7045C37.738 26.359 38.8268 25.267 40.1755 25.267H49.1845C50.53 25.267 51.622 26.359 51.622 27.7045C51.622 29.05 50.53 30.142 49.1845 30.142" fill="#9F9F9F"/>
@@ -60,9 +72,15 @@ function Categories({cart, plusProductToCart, deleteProduct, minusProductToCart,
 							<path fillRule="evenodd" clipRule="evenodd" d="M52.4555 64.4143C50.135 64.4143 48.25 62.5261 48.25 60.2056C48.25 57.8851 50.135 56.0001 52.4555 56.0001C54.7792 56.0001 56.6675 57.8851 56.6675 60.2056C56.6675 62.5261 54.7792 64.4143 52.4555 64.4143" fill="#9F9F9F"/>
 						</svg>
 						<span className="mini-cart__title_empty">Выберите товары<br/>и добавьте их к заказу</span>
-					</div> :
+					</motion.div> :
 					<>
-						<div className="mini-cart-bottom">
+						<motion.div
+							layout
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ delay: 0.2 }}
+							className="mini-cart-bottom"
+						>
 							<div className="mini-cart-bottom__item">
 								<span className="mini-cart-bottom__item-title">Доставка:</span>
 								<span className="mini-cart-bottom__item-value">0 ₽</span>
@@ -77,9 +95,15 @@ function Categories({cart, plusProductToCart, deleteProduct, minusProductToCart,
 								<span className="mini-cart-bottom__price-title">Итого:</span>
 								<span className="mini-cart-bottom__price">{countTotalPrice()} ₽</span>
 							</div>
-						</div>
+						</motion.div>
 
-						<button className="mini-cart__buy">К оплате</button>
+						<motion.button
+							layout
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ delay: 0.2 }}
+							className="mini-cart__buy"
+						>К оплате</motion.button>
 
 					</>
 				}

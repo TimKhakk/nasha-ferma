@@ -2,6 +2,7 @@ import './App.scss';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import { data } from './data';
 import { useState } from "react";
+
 // Add the Firebase products that you want to use
 import firebase from 'firebase';
 
@@ -31,8 +32,6 @@ firebase.initializeApp({
 	appId: "1:811210513196:web:598a5823230024985dea89"
 });
 
-console.log(firebase);
-
 function App() {
 	const getCartLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
 	const setCartLocalStorage = cart => localStorage.setItem('cartLocalStorage', JSON.stringify(cart));
@@ -49,7 +48,6 @@ function App() {
 			return category
 		})
 	}
-
 
 	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
 	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]

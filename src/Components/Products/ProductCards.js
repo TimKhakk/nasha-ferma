@@ -1,11 +1,18 @@
 
+import { motion } from 'framer-motion';
+
 function ProductCards({cart, plusProductToCart, minusProductToCart, addProductToCart, categoriedProducts, groups}) {
 
 	const renderproducts = () => {
 		return groups.map(group => {
 			const groupedProducts = categoriedProducts.filter(item => item.group === group);
 			return (
-				<div key={group} className="product-card">
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					key={group}
+					className="product-card"
+				>
 					<h4 className="product-card__title">{group}</h4>
 
 					<div className="product-card__items">
@@ -13,7 +20,14 @@ function ProductCards({cart, plusProductToCart, minusProductToCart, addProductTo
 							return (
 								<div key={id} className="product-card-item">
 									<div className="product-card-item__img-block">
-										<img src={imgUrl} alt={name} className="product-card-item__img"/>
+										<motion.img
+											initial={{ opacity: 0 }}
+											animate={{ opacity: 1 }}
+											transition={{ delay: .2 }}
+											src={imgUrl}
+											alt={name}
+											className="product-card-item__img"
+										/>
 									</div>
 
 									<p className="product-card-item__title">{name}</p>
@@ -54,7 +68,7 @@ function ProductCards({cart, plusProductToCart, minusProductToCart, addProductTo
 							);
 						})}
 					</div>
-				</div>
+				</motion.div>
 			)
 
 		})
