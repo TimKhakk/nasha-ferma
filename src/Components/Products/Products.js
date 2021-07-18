@@ -3,7 +3,6 @@ import Container    from '../Default/Container';
 import Categories   from "./Categories";
 import ProductCards from "./ProductCards";
 import MiniCart     from "./MiniCart";
-// import { motion } from 'framer-motion';
 
 function products({
 		products,
@@ -25,9 +24,7 @@ function products({
 
 			<Container>
 
-				<div
-					className="products__row"
-				>
+				<div className="products__row">
 
 					<Categories
 						products={products}

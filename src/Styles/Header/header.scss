@@ -17,6 +17,9 @@
     line-height: 37px;
     cursor: pointer;
     transition: color .2s;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
 
     &:hover {
         color: $dark-primary-color;

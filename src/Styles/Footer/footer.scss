@@ -3,12 +3,6 @@
   background: $secondary-color;
   margin-top: 50px;
 
-  &-logo {
-    display: grid;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
   &__top {
     border-bottom: 1px solid $light-secondary-color;
     padding: 40px 0;
@@ -32,10 +26,11 @@
   .footer {
     display: block;
 
-    &-logo {
+    .logo {
       grid-column: span 2;
       justify-self: center;
     }
+
     &__top {
       padding: 20px 0;
     }

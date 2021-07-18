@@ -1,5 +1,9 @@
+import NavSide from './NavSide';
+import Logo from '../Default/Logo';
+import Container    from '../Default/Container';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+
 
 function Header() {
 
@@ -11,7 +15,7 @@ function Header() {
 	return (
 		<header className="header">
 
-			<div className="container">
+			<Container>
 
 				<div className="header__row">
 
@@ -20,9 +24,7 @@ function Header() {
 					</svg>
 
 
-					<div className="logo">
-						<Link to="/">Наша ферма</Link>
-					</div>
+					<Logo />
 
 					<nav className="nav">
 						<ul className={isActive ? "nav__menu nav__menu_active" : "nav__menu"}>
@@ -57,25 +59,12 @@ function Header() {
 							<li className="nav__menu-item disabled">Фермерам</li>
 						</ul>
 
-						<ul className="nav__side">
-							<Link to="/auth" className="nav__side-item">
-								<svg className="nav__side-item-auth"  width="20" height="20">
-									<use href="icons.svg#person"></use>
-								</svg>
-								<span className="nav__side-item-auth-title">Войти</span>
-							</Link>
-							<Link to="/cart" className="nav__side-item">
-								<svg className="nav__side-item-cart" width="20" height="20">
-                  <use href="icons.svg#cart"></use>
-                </svg>
-								<span className="nav__side-item-cart-title">Корзина</span>
-							</Link>
-						</ul>
+						<NavSide />
 					</nav>
 
 				</div>
 
-			</div>
+			</Container>
 			<div onClick={closeMenu} className={`shadow ${isActive ? "active" : ""}`}></div>
 		</header>
 	);
