@@ -1,7 +1,7 @@
 import Container from '../../Default/Container';
 
 // import Swiper core and required modules
-import SwiperCore, { Navigation, A11y } from 'swiper';
+import SwiperCore, { Autoplay, Navigation } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,7 +10,7 @@ import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 
 // install Swiper modules
-SwiperCore.use([ Navigation, A11y]);
+SwiperCore.use([ Autoplay, Navigation ]);
 
 
 const PromoBlock = () => {
@@ -49,8 +49,8 @@ const PromoBlock = () => {
 				loop={true}
 				spaceBetween={16}
 				autoplay={{
-					delay: 4000,
-					disableOnInteraction: false,
+					"delay": 4000,
+					"disableOnInteraction": false,
 				}}
 				breakpoints={{
 					// when window width is >= 1400px

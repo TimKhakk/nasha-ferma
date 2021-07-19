@@ -1,5 +1,6 @@
 import Container from '../Default/Container';
 import PromoBlock from './PromoBlock/PromoBlock';
+import Collection from './Collection/Collection';
 
 function Homepage() {
 	return (
@@ -12,12 +13,11 @@ function Homepage() {
 							<h1 className="homepage-main__title">Доставка фермерских продуктов</h1>
 						</div>
 					</div>
-
-
 				</Container>
 
-
 				<PromoBlock />
+
+				<Collection />
 			</div>
 		</>
 	);

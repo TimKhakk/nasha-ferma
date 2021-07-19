@@ -1,0 +1,15 @@
+
+.coll {
+
+  &__row {
+    display: flex;
+    gap: 36px;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+}
