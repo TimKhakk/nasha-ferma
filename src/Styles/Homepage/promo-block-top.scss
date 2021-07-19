@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 36px;
 
   &__title {
     font-size: 36px;
@@ -13,5 +14,27 @@
     display: flex;
     align-items: center;
     gap: 12px;
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    border: 1px solid $secondary-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+// 0 - 768px
+@media screen and (max-width: $breakpoints-md) {
+  .promo-block-top {
+    margin-bottom: 15px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 }

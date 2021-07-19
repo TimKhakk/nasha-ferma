@@ -1,4 +1,16 @@
 .homepage {
   display: grid;
-  gap: 55px;
+  &__row {
+    margin-bottom: 55px;
+  }
+}
+
+
+// 0 - 768px
+@media screen and (max-width: $breakpoints-md) {
+  .homepage {
+    &__row {
+      margin-bottom: 32px;
+    }
+  }
 }
