@@ -65,25 +65,25 @@ const PromoBlock = () => {
 			>
 				<SwiperSlide className="promo-block-slider__item green">
 					<h3 className="promo-block-slider__item-title">5 ДОСТАВОК<br/>БЕСПЛАТНО</h3>
-					<img className="promo-block-slider__item-img" src="images/promo-img-1.png" alt="овощи" srcset="" />
+					<img className="promo-block-slider__item-img" src="promo-img-1.png" alt="овощи" srcset="" />
 					<span className="promo-block-slider__item-value promo-code">4F5B</span>
 				</SwiperSlide>
 
 				<SwiperSlide className="promo-block-slider__item red">
 					<h3 className="promo-block-slider__item-title">СКИДКА<br/>на любые ягоды</h3>
-					<img className="promo-block-slider__item-img" src="images/promo-img-2.png" alt="ягоды" srcset="" />
+					<img className="promo-block-slider__item-img" src="promo-img-2.png" alt="ягоды" srcset="" />
 					<span className="promo-block-slider__item-value">20%</span>
 				</SwiperSlide>
 
 				<SwiperSlide className="promo-block-slider__item yellow">
 					<h3 className="promo-block-slider__item-title">СКИДКА<br/>на любой мёд</h3>
-					<img className="promo-block-slider__item-img" src="images/promo-img-3.png" alt="банка с медом" srcset="" />
+					<img className="promo-block-slider__item-img" src="promo-img-3.png" alt="банка с медом" srcset="" />
 					<span className="promo-block-slider__item-value">50%</span>
 				</SwiperSlide>
 
 				<SwiperSlide className="promo-block-slider__item blue">
 					<h3 className="promo-block-slider__item-title">СКИДКА<br/>на молочные продукты</h3>
-					<img className="promo-block-slider__item-img" src="images/promo-img-4.png" alt="бутылка молока" srcset="" />
+					<img className="promo-block-slider__item-img" src="promo-img-4.png" alt="бутылка молока" srcset="" />
 					<span className="promo-block-slider__item-value">10%</span>
 				</SwiperSlide>
 
