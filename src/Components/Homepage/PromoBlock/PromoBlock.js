@@ -40,52 +40,53 @@ const PromoBlock = () => {
 							</div>
 						</div>
 
-						<Swiper
-							className="promo-block-slider__wrapper"
-							slidesPerView={"auto"}
-							grabCursor={true}
-							loop={true}
-							spaceBetween={16}
-							autoplay={{
-								delay: 4000,
-								disableOnInteraction: false,
-							}}
-							breakpoints={{
-								// when window width is >= 1400px
-								1400: {
-									spaceBetween: 36,
-								}
-							}}
-							navigation={{
-								nextEl: '.pagination__btn-next',
-								prevEl: '.pagination__btn-prev',
-							}}
-						>
-							<SwiperSlide className="promo-block-slider__item green">
-								<h3 className="promo-block-slider__item-title">5 ДОСТАВОК<br/>БЕСПЛАТНО</h3>
-								<span className="promo-block-slider__item-value">4F5B</span>
-							</SwiperSlide>
 
-							<SwiperSlide className="promo-block-slider__item red">
-								<h3 className="promo-block-slider__item-title">СКИДКА<br/>на любые ягоды</h3>
-								<span className="promo-block-slider__item-value">20%</span>
-							</SwiperSlide>
-
-							<SwiperSlide className="promo-block-slider__item yellow">
-								<h3 className="promo-block-slider__item-title">СКИДКА<br/>на любой мёд</h3>
-								<span className="promo-block-slider__item-value">50%</span>
-							</SwiperSlide>
-
-							<SwiperSlide className="promo-block-slider__item blue">
-								<h3 className="promo-block-slider__item-title">СКИДКА<br/>на молочные продукты</h3>
-								<span className="promo-block-slider__item-value">10%</span>
-							</SwiperSlide>
-
-						</Swiper>
 					</div>
 				</Container>
 
 			</div>
+			<Swiper
+				className="promo-block-slider__wrapper"
+				slidesPerView={"auto"}
+				grabCursor={true}
+				loop={true}
+				spaceBetween={16}
+				autoplay={{
+					delay: 4000,
+					disableOnInteraction: false,
+				}}
+				breakpoints={{
+					// when window width is >= 1400px
+					1400: {
+						spaceBetween: 36,
+					}
+				}}
+				navigation={{
+					nextEl: '.pagination__btn-next',
+					prevEl: '.pagination__btn-prev',
+				}}
+			>
+				<SwiperSlide className="promo-block-slider__item green">
+					<h3 className="promo-block-slider__item-title">5 ДОСТАВОК<br/>БЕСПЛАТНО</h3>
+					<span className="promo-block-slider__item-value">4F5B</span>
+				</SwiperSlide>
+
+				<SwiperSlide className="promo-block-slider__item red">
+					<h3 className="promo-block-slider__item-title">СКИДКА<br/>на любые ягоды</h3>
+					<span className="promo-block-slider__item-value">20%</span>
+				</SwiperSlide>
+
+				<SwiperSlide className="promo-block-slider__item yellow">
+					<h3 className="promo-block-slider__item-title">СКИДКА<br/>на любой мёд</h3>
+					<span className="promo-block-slider__item-value">50%</span>
+				</SwiperSlide>
+
+				<SwiperSlide className="promo-block-slider__item blue">
+					<h3 className="promo-block-slider__item-title">СКИДКА<br/>на молочные продукты</h3>
+					<span className="promo-block-slider__item-value">10%</span>
+				</SwiperSlide>
+
+			</Swiper>
     </>
   )
 };

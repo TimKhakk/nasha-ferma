@@ -1,10 +1,10 @@
 
 .swiper {
   &-container {
-    width: 100%;
+    width: 1300px;
+    margin: 0 auto;
   }
   &-wrapper {
-    width: 100%;
     .green {
       background: linear-gradient(73.27deg, #00E3AE 4.94%, #4EE285 37.76%, #9BE15D 98.57%);
     }
@@ -32,15 +32,19 @@
   }
 }
 
-// 0 - 576px
+// 0 - 1200px
 @media screen and (max-width: $breakpoints-lg) {
   .swiper {
+    &-wrapper {
+      width: 100%;
+      padding: 0 16px;
+    }
 
     &-container {
       width: calc(100% + 16px);
     }
     &-slide {
-      width: 40% !important;
+      width: 375px !important;
       height: 210px !important;
     }
   }

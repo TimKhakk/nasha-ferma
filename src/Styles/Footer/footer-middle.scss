@@ -38,7 +38,7 @@
 
 
 // 0 - $working-breakpoint
-@media screen and (max-width: $working-breakpoint) {
+@media screen and (max-width: $breakpoints-md) {
   .footer-middle {
     padding: 20px 0;
 
