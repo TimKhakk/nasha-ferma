@@ -1,7 +1,7 @@
 import './App.scss';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { data } from './data';
-import { useState } from "react";
+import { useState } from 'react';
 
 // Add the Firebase products that you want to use
 import firebase from 'firebase';
@@ -9,96 +9,113 @@ import firebase from 'firebase';
 // import { useAuthState } from 'react-firebase-hooks/auth';
 // import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-import "firebase/auth";
-import "firebase/firestore";
+import 'firebase/auth';
+import 'firebase/firestore';
 
 // Components
-import Header   from './Components/Header/Header';
+import Header from './Components/Header/Header';
 import Homepage from './Components/Homepage/Homepage';
 import Products from './Components/Products/Products';
-import Cart     from './Components/Cart/Cart';
-import Auth     from './Components/Auth/Auth';
-import Footer   from './Components/Footer/Footer';
+import Cart from './Components/Cart/Cart';
+import Auth from './Components/Auth/Auth';
+import Footer from './Components/Footer/Footer';
 
 // const auth = firebase.auth();
 // const firestore = firebase.firestore();
 
 firebase.initializeApp({
-	apiKey: "AIzaSyBQaJY878XMgqk8LA0Z87D9tTe2j9xtYaQ",
-	authDomain: "nasha-ferma.firebaseapp.com",
-	projectId: "nasha-ferma",
-	storageBucket: "nasha-ferma.appspot.com",
-	messagingSenderId: "811210513196",
-	appId: "1:811210513196:web:598a5823230024985dea89"
+	apiKey: 'AIzaSyBQaJY878XMgqk8LA0Z87D9tTe2j9xtYaQ',
+	authDomain: 'nasha-ferma.firebaseapp.com',
+	projectId: 'nasha-ferma',
+	storageBucket: 'nasha-ferma.appspot.com',
+	messagingSenderId: '811210513196',
+	appId: '1:811210513196:web:598a5823230024985dea89',
 });
 
 function App() {
-	const getCartLocalStorage = () => JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
-	const setCartLocalStorage = cart => localStorage.setItem('cartLocalStorage', JSON.stringify(cart));
+	const getCartLocalStorage = () =>
+		JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
+	const setCartLocalStorage = cart =>
+		localStorage.setItem('cartLocalStorage', JSON.stringify(cart));
 
-	const getSelectedCategoryLocalStorage = () => JSON?.parse(localStorage.getItem('selectedCategoryLocalStorage')) || "Овощи";
-	const setSelectedCategoryLocalStorage = category => localStorage.setItem('selectedCategoryLocalStorage', JSON.stringify(category));
+	const getSelectedCategoryLocalStorage = () =>
+		JSON?.parse(localStorage.getItem('selectedCategoryLocalStorage')) ||
+		'Овощи';
+	const setSelectedCategoryLocalStorage = category =>
+		localStorage.setItem(
+			'selectedCategoryLocalStorage',
+			JSON.stringify(category)
+		);
 
-	const [ cart, setCart ] = useState(getCartLocalStorage);
-	const [ category, setCategory ] = useState(getSelectedCategoryLocalStorage);
+	const [cart, setCart] = useState(getCartLocalStorage);
+	const [category, setCategory] = useState(getSelectedCategoryLocalStorage);
 
-	const changeCategory = (category) => {
+	const changeCategory = category => {
 		return setCategory(() => {
 			setSelectedCategoryLocalStorage(category);
-			return category
-		})
-	}
+			return category;
+		});
+	};
 
 	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
-	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
+	const products = сategories.map(category =>
+		data.filter(item => item.category === category)
+	); //  [ [], [] ]
 	const categoriedProducts = data.filter(item => item.category === category); // [{"Овощи"}, {"Овощи"}]
 	const groups = [...new Set(categoriedProducts.map(item => item.group))]; // ["Огурцы", "Томаты"]
 
-	const plusProductToCart = (id) => {
+	const plusProductToCart = id => {
 		setCart(prevCart => {
 			const foundProduct = prevCart.find(item => item.id === id);
-			const updatedProduct = {...foundProduct, count: foundProduct.count + 1};
-
-			const updatedCart = prevCart.map(item => {
-				if (item.id === updatedProduct.id) {
-					return updatedProduct
-				} else {
-					return item
-				}
-			})
-			setCartLocalStorage(updatedCart);
-			return updatedCart;
-		})
-	};
-
-	const deleteProduct = (id) => setCart(prevCart => {
-		const updatedCart = prevCart.filter(item => item.id !== id);
-		setCartLocalStorage(updatedCart);
-		return updatedCart;
-	})
-
-	const minusProductToCart = (id) => {
-		setCart(prevCart => {
-			const foundProduct = prevCart.find(item => item.id === id);
-			if(foundProduct.count <= 1) {
-				deleteProduct(id)
-			}
-			const updatedProduct = {...foundProduct, count: foundProduct.count - 1};
+			const updatedProduct = {
+				...foundProduct,
+				count: foundProduct.count + 1,
+			};
 
 			const updatedCart = prevCart.map(item => {
 				if (item.id === updatedProduct.id) {
 					return updatedProduct;
 				} else {
-					return item
+					return item;
+				}
+			});
+			setCartLocalStorage(updatedCart);
+			return updatedCart;
+		});
+	};
+
+	const deleteProduct = id =>
+		setCart(prevCart => {
+			const updatedCart = prevCart.filter(item => item.id !== id);
+			setCartLocalStorage(updatedCart);
+			return updatedCart;
+		});
+
+	const minusProductToCart = id => {
+		setCart(prevCart => {
+			const foundProduct = prevCart.find(item => item.id === id);
+			if (foundProduct.count <= 1) {
+				deleteProduct(id);
+			}
+			const updatedProduct = {
+				...foundProduct,
+				count: foundProduct.count - 1,
+			};
+
+			const updatedCart = prevCart.map(item => {
+				if (item.id === updatedProduct.id) {
+					return updatedProduct;
+				} else {
+					return item;
 				}
 			});
 
 			setCartLocalStorage(updatedCart);
 			return updatedCart;
-		})
+		});
 	};
 
-	const addProductToCart = (id) => {
+	const addProductToCart = id => {
 		setCart(prevCart => {
 			const newProduct = data.find(item => item.id === id);
 			newProduct.count = 1;
@@ -107,20 +124,19 @@ function App() {
 			setCartLocalStorage(updatedCart);
 
 			return updatedCart;
-
-		})
+		});
 	};
 
-	const countTotalPrice = () => cart.reduce((sum, item) => sum + (item.price * item.count), 0); // Считаем всю сумму
+	const countTotalPrice = () =>
+		cart.reduce((sum, item) => sum + item.price * item.count, 0); // Считаем всю сумму
 
 	return (
-		<div className="app">
+		<div className='app'>
 			<Router>
+				<Header />
+				<Route path='/' exact component={Homepage} />
 
-				<Header/>
-				<Route path="/" exact   component={Homepage}/>
-
-				<Route path="/products">
+				<Route path='/products'>
 					<Products
 						cart={cart}
 						plusProductToCart={plusProductToCart}
@@ -135,7 +151,7 @@ function App() {
 					/>
 				</Route>
 
-				<Route path="/cart">
+				<Route path='/cart'>
 					<Cart
 						cart={cart}
 						plusProductToCart={plusProductToCart}
@@ -145,10 +161,9 @@ function App() {
 					/>
 				</Route>
 
-				<Route path="/auth"     component={Auth}/>
+				<Route path='/auth' component={Auth} />
 
-				<Footer changeCategory={changeCategory}/>
-
+				<Footer changeCategory={changeCategory} />
 			</Router>
 		</div>
 	);

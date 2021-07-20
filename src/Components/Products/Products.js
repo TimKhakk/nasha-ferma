@@ -1,35 +1,28 @@
-import Breadcrumbs  from '../Default/Breadcrumbs';
-import Container    from '../Default/Container';
-import Categories   from "./Categories";
+import Breadcrumbs from "../Default/Breadcrumbs";
+import Container from "../Default/Container";
+import Categories from "./Categories";
 import ProductCards from "./ProductCards";
-import MiniCart     from "./MiniCart";
+import MiniCart from "./MiniCart";
 
 function products({
-		products,
-		cart,
-		plusProductToCart,
-		deleteProduct,
-		minusProductToCart,
-		addProductToCart,
-		countTotalPrice,
-		categoriedProducts,
-		groups,
-		changeCategory
-	}) {
-
+	products,
+	cart,
+	plusProductToCart,
+	deleteProduct,
+	minusProductToCart,
+	addProductToCart,
+	countTotalPrice,
+	categoriedProducts,
+	groups,
+	changeCategory,
+}) {
 	return (
 		<div className="products">
-
 			<Breadcrumbs name={"Продукты"} />
 
 			<Container>
-
 				<div className="products__row">
-
-					<Categories
-						products={products}
-						changeCategory={changeCategory}
-					/>
+					<Categories products={products} changeCategory={changeCategory} />
 
 					<ProductCards
 						cart={cart}
@@ -48,7 +41,6 @@ function products({
 						minusProductToCart={minusProductToCart}
 						countTotalPrice={countTotalPrice}
 					/>
-
 				</div>
 			</Container>
 		</div>
