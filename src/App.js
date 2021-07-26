@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { data } from './data';
-import { useState, useEffect } from 'react';
 
 // Components
 import Header from './Components/Header/Header';
@@ -14,28 +13,16 @@ import Footer from './Components/Footer/Footer';
 import firebase from 'firebase';
 import config from './Firebase/config';
 
+// Hooks
+import useLocalStorage from './Hooks/useLocalStorage';
+
 firebase.initializeApp(config);
 
 function App() {
-	const getCartLocalStorage = () =>
-		JSON?.parse(localStorage.getItem('cartLocalStorage')) || [];
-	const setCartLocalStorage = cart =>
-		localStorage.setItem('cartLocalStorage', JSON.stringify(cart));
+	const [cart, setCart] = useLocalStorage([], 'cartLocalStorage');
+	const [category, setCategory] = useLocalStorage('Овощи', 'selectedCategoryLocalStorage');
 
-	const getSelectedCategoryLocalStorage = () =>
-		JSON?.parse(localStorage.getItem('selectedCategoryLocalStorage')) || 'Овощи';
-	const setSelectedCategoryLocalStorage = category =>
-		localStorage.setItem('selectedCategoryLocalStorage', JSON.stringify(category));
-
-	const [cart, setCart] = useState(getCartLocalStorage);
-	const [category, setCategory] = useState(getSelectedCategoryLocalStorage);
-
-	const changeCategory = category => {
-		return setCategory(() => {
-			setSelectedCategoryLocalStorage(category);
-			return category;
-		});
-	};
+	const changeCategory = category => setCategory(() => category);
 
 	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
 	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
@@ -61,11 +48,7 @@ function App() {
 		});
 	};
 
-	const deleteProduct = id =>
-		setCart(prevCart => {
-			const updatedCart = prevCart.filter(item => item.id !== id);
-			return updatedCart;
-		});
+	const deleteProduct = id => setCart(prevCart => prevCart.filter(item => item.id !== id));
 
 	const minusProductToCart = id => {
 		setCart(prevCart => {
@@ -101,10 +84,6 @@ function App() {
 
 	const countTotalPrice = () => cart.reduce((sum, item) => sum + item.price * item.count, 0);
 
-	useEffect(() => {
-		console.log('useEffect');
-		setCartLocalStorage(cart);
-	}, [cart]);
 	return (
 		<div className='app'>
 			<Router>
