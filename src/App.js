@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { data } from './data';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Components
 import Header from './Components/Header/Header';
@@ -23,13 +23,9 @@ function App() {
 		localStorage.setItem('cartLocalStorage', JSON.stringify(cart));
 
 	const getSelectedCategoryLocalStorage = () =>
-		JSON?.parse(localStorage.getItem('selectedCategoryLocalStorage')) ||
-		'Овощи';
+		JSON?.parse(localStorage.getItem('selectedCategoryLocalStorage')) || 'Овощи';
 	const setSelectedCategoryLocalStorage = category =>
-		localStorage.setItem(
-			'selectedCategoryLocalStorage',
-			JSON.stringify(category)
-		);
+		localStorage.setItem('selectedCategoryLocalStorage', JSON.stringify(category));
 
 	const [cart, setCart] = useState(getCartLocalStorage);
 	const [category, setCategory] = useState(getSelectedCategoryLocalStorage);
@@ -42,9 +38,7 @@ function App() {
 	};
 
 	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
-	const products = сategories.map(category =>
-		data.filter(item => item.category === category)
-	); //  [ [], [] ]
+	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
 	const categoriedProducts = data.filter(item => item.category === category); // [{"Овощи"}, {"Овощи"}]
 	const groups = [...new Set(categoriedProducts.map(item => item.group))]; // ["Огурцы", "Томаты"]
 
@@ -63,7 +57,6 @@ function App() {
 					return item;
 				}
 			});
-			setCartLocalStorage(updatedCart);
 			return updatedCart;
 		});
 	};
@@ -71,7 +64,6 @@ function App() {
 	const deleteProduct = id =>
 		setCart(prevCart => {
 			const updatedCart = prevCart.filter(item => item.id !== id);
-			setCartLocalStorage(updatedCart);
 			return updatedCart;
 		});
 
@@ -94,7 +86,6 @@ function App() {
 				}
 			});
 
-			setCartLocalStorage(updatedCart);
 			return updatedCart;
 		});
 	};
@@ -104,16 +95,16 @@ function App() {
 			const newProduct = data.find(item => item.id === id);
 			newProduct.count = 1;
 			const updatedCart = [...prevCart, newProduct];
-
-			setCartLocalStorage(updatedCart);
-
 			return updatedCart;
 		});
 	};
 
-	const countTotalPrice = () =>
-		cart.reduce((sum, item) => sum + item.price * item.count, 0);
+	const countTotalPrice = () => cart.reduce((sum, item) => sum + item.price * item.count, 0);
 
+	useEffect(() => {
+		console.log('useEffect');
+		setCartLocalStorage(cart);
+	}, [cart]);
 	return (
 		<div className='app'>
 			<Router>
