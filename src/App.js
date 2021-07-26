@@ -112,7 +112,7 @@ function App() {
 	};
 
 	const countTotalPrice = () =>
-		cart.reduce((sum, item) => sum + item.price * item.count, 0); // Считаем всю сумму
+		cart.reduce((sum, item) => sum + item.price * item.count, 0);
 
 	return (
 		<div className='app'>
