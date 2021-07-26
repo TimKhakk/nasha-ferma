@@ -77,8 +77,7 @@ function App() {
 		setCart(prevCart => {
 			const newProduct = data.find(item => item.id === id);
 			newProduct.count = 1;
-			const updatedCart = [...prevCart, newProduct];
-			return updatedCart;
+			return [...prevCart, newProduct];
 		});
 	};
 

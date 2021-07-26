@@ -1,10 +1,12 @@
-import Breadcrumbs from "../Default/Breadcrumbs";
-import Container from "../Default/Container";
-import Categories from "./Categories";
-import ProductCards from "./ProductCards";
-import MiniCart from "./MiniCart";
+import Breadcrumbs from '../Default/Breadcrumbs';
+import Container from '../Default/Container';
+import Categories from './Categories';
+import ProductCards from './ProductCards';
+import MiniCart from './MiniCart';
 
-function products({
+import PropTypes from 'prop-types';
+
+function Products({
 	products,
 	cart,
 	plusProductToCart,
@@ -17,11 +19,11 @@ function products({
 	changeCategory,
 }) {
 	return (
-		<div className="products">
-			<Breadcrumbs name={"Продукты"} />
+		<div className='products'>
+			<Breadcrumbs name={'Продукты'} />
 
 			<Container>
-				<div className="products__row">
+				<div className='products__row'>
 					<Categories products={products} changeCategory={changeCategory} />
 
 					<ProductCards
@@ -47,4 +49,18 @@ function products({
 	);
 }
 
-export default products;
+Products.propTypes = {
+	products: PropTypes.arrayOf(PropTypes.array).isRequired,
+	cart: PropTypes.arrayOf(PropTypes.object).isRequired,
+	groups: PropTypes.arrayOf(PropTypes.string).isRequired,
+	categoriedProducts: PropTypes.arrayOf(PropTypes.object).isRequired,
+
+	plusProductToCart: PropTypes.func.isRequired,
+	deleteProduct: PropTypes.func.isRequired,
+	minusProductToCart: PropTypes.func.isRequired,
+	addProductToCart: PropTypes.func.isRequired,
+	countTotalPrice: PropTypes.func.isRequired,
+	changeCategory: PropTypes.func.isRequired,
+};
+
+export default Products;
