@@ -1,18 +1,15 @@
-
 import FooterMiddle from './FooterMiddle';
-import FooterTop    from './FooterTop';
+import FooterTop from './FooterTop';
 import FooterBottom from './FooterBottom';
 
-export default function Footer({changeCategory}) {
+export default function Footer() {
 	return (
-		<footer className="footer">
+		<footer className='footer'>
+			<FooterTop />
 
-      <FooterTop />
+			<FooterMiddle />
 
-      <FooterMiddle changeCategory={changeCategory}/>
-
-      <FooterBottom />
-
+			<FooterBottom />
 		</footer>
 	);
 }

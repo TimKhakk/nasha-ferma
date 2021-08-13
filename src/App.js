@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { data } from './data';
+// React Router
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Components
 import Header from './Components/Header/Header';
@@ -13,112 +13,29 @@ import Footer from './Components/Footer/Footer';
 import firebase from 'firebase';
 import config from './Firebase/config';
 
-// Hooks
-import useLocalStorage from './Hooks/useLocalStorage';
+import { StoreContextProvider } from './Context/StoreContext';
 
 firebase.initializeApp(config);
 
 function App() {
-	const [cart, setCart] = useLocalStorage([], 'cartLocalStorage');
-	const [category, setCategory] = useLocalStorage('Овощи', 'selectedCategoryLocalStorage');
-
-	const changeCategory = category => setCategory(() => category);
-
-	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
-	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
-	const categoriedProducts = data.filter(item => item.category === category); // [{"Овощи"}, {"Овощи"}]
-	const groups = [...new Set(categoriedProducts.map(item => item.group))]; // ["Огурцы", "Томаты"]
-
-	const plusProductToCart = id => {
-		setCart(prevCart => {
-			const foundProduct = prevCart.find(item => item.id === id);
-			const updatedProduct = {
-				...foundProduct,
-				count: foundProduct.count + 1,
-			};
-
-			const updatedCart = prevCart.map(item => {
-				if (item.id === updatedProduct.id) {
-					return updatedProduct;
-				} else {
-					return item;
-				}
-			});
-			return updatedCart;
-		});
-	};
-
-	const deleteProduct = id => setCart(prevCart => prevCart.filter(item => item.id !== id));
-
-	const minusProductToCart = id => {
-		setCart(prevCart => {
-			const foundProduct = prevCart.find(item => item.id === id);
-			if (foundProduct.count <= 1) {
-				deleteProduct(id);
-			}
-			const updatedProduct = {
-				...foundProduct,
-				count: foundProduct.count - 1,
-			};
-
-			const updatedCart = prevCart.map(item => {
-				if (item.id === updatedProduct.id) {
-					return updatedProduct;
-				} else {
-					return item;
-				}
-			});
-
-			return updatedCart;
-		});
-	};
-
-	const addProductToCart = id => {
-		setCart(prevCart => {
-			const newProduct = data.find(item => item.id === id);
-			newProduct.count = 1;
-			return [...prevCart, newProduct];
-		});
-	};
-
-	const countTotalPrice = () => cart.reduce((sum, item) => sum + item.price * item.count, 0);
-
 	return (
-		<div className='app'>
-			<Router>
-				<Header />
-				<Route path='/' exact component={Homepage} />
+		<StoreContextProvider>
+			<div className='app'>
+				<Router>
+					<Header />
+					<Switch>
+						<Route path='/' exact component={Homepage} />
 
-				<Route path='/products'>
-					<Products
-						cart={cart}
-						plusProductToCart={plusProductToCart}
-						deleteProduct={deleteProduct}
-						minusProductToCart={minusProductToCart}
-						products={products}
-						addProductToCart={addProductToCart}
-						countTotalPrice={countTotalPrice}
-						categoriedProducts={categoriedProducts}
-						groups={groups}
-						changeCategory={changeCategory}
-					/>
-				</Route>
+						<Route path='/products' component={Products} />
 
-				<Route path='/cart'>
-					<Cart
-						cart={cart}
-						plusProductToCart={plusProductToCart}
-						deleteProduct={deleteProduct}
-						minusProductToCart={minusProductToCart}
-						countTotalPrice={countTotalPrice}
-					/>
-				</Route>
+						<Route path='/cart' component={Cart} />
 
-				<Route path='/auth' component={Auth} />
-
-				<Footer changeCategory={changeCategory} />
-			</Router>
-		</div>
+						<Route path='/auth' component={Auth} />
+					</Switch>
+					<Footer />
+				</Router>
+			</div>
+		</StoreContextProvider>
 	);
 }
 

@@ -1,12 +1,10 @@
 import React from 'react';
+import { useStoreContext } from '../../Context/StoreContext';
 
-const CartItem = ({
-	item,
-	plusProductToCart,
-	deleteProduct,
-	minusProductToCart,
-}) => {
+const CartItem = ({ item }) => {
+	const { plusProductToCart, deleteProduct, minusProductToCart } = useStoreContext();
 	const { id, imgUrl, name, weight, price, count } = item;
+
 	return (
 		<div key={id} className='big-cart-item'>
 			<div className='big-cart-item__photo-block'>
@@ -22,10 +20,7 @@ const CartItem = ({
 			</div>
 
 			<div className='big-cart-item__btns-block'>
-				<button
-					className='big-cart-item__minus-btn'
-					onClick={() => minusProductToCart(id)}
-				>
+				<button className='big-cart-item__minus-btn' onClick={() => minusProductToCart(id)}>
 					<svg className='big-cart-item__btn-svg' width='8px' height='2px'>
 						<use href='icons.svg#minus-big-cart'></use>
 					</svg>
@@ -39,12 +34,7 @@ const CartItem = ({
 					}}
 					className='big-cart-item__plus-btn'
 				>
-					<svg
-						className='big-cart-item__btn-svg'
-						viewBox='0 0 10 10'
-						width='8px'
-						height='8px'
-					>
+					<svg className='big-cart-item__btn-svg' viewBox='0 0 10 10' width='8px' height='8px'>
 						<use href='icons.svg#plus-big-cart'></use>
 					</svg>
 				</button>
@@ -53,10 +43,7 @@ const CartItem = ({
 			<div className='big-cart-item__total-price-block'>{price * count} ₽</div>
 
 			<div className='big-cart-item__delete-btn-block'>
-				<button
-					className='big-cart-item__delete-btn'
-					onClick={() => deleteProduct(id)}
-				>
+				<button className='big-cart-item__delete-btn' onClick={() => deleteProduct(id)}>
 					<svg
 						className='mini-cart-item__delete-btn-svg'
 						xmlns='http://www.w3.org/2000/svg'

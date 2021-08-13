@@ -2,13 +2,10 @@ import Breadcrumbs from '../Default/Breadcrumbs';
 import CartItem from './CartItem';
 import Order from './Order';
 
-function Cart({
-	cart,
-	plusProductToCart,
-	deleteProduct,
-	minusProductToCart,
-	countTotalPrice,
-}) {
+import { useStoreContext } from '../../Context/StoreContext';
+
+function Cart() {
+	const { cart, countTotalPrice } = useStoreContext();
 	return (
 		<>
 			<Breadcrumbs
@@ -24,14 +21,7 @@ function Cart({
 				<div className='cart-row'>
 					<div className='big-cart-items'>
 						{cart.map(item => {
-							return (
-								<CartItem
-									item={item}
-									plusProductToCart={plusProductToCart}
-									deleteProduct={deleteProduct}
-									minusProductToCart={minusProductToCart}
-								/>
-							);
+							return <CartItem item={item} />;
 						})}
 					</div>
 
