@@ -1,6 +1,7 @@
 import NavSide from './NavSide';
 import Logo from '../Default/Logo';
 import Container from '../Default/Container';
+import Svg from '../Default/Svg';
 
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -25,15 +26,8 @@ function Header() {
 					<nav className='nav'>
 						<ul className={isActive ? 'nav__menu nav__menu_active' : 'nav__menu'}>
 							<div className='nav-menu-sm-top'>
-								<button className='nav-menu-sm-top__close'>
-									<svg
-										onClick={closeMenu}
-										className='nav-menu-sm-top__close-svg'
-										width='24'
-										height='24'
-									>
-										<use href='icons.svg#cross'></use>
-									</svg>
+								<button onClick={closeMenu} className='nav-menu-sm-top__close'>
+									<Svg id={'cross'} wh={'24'} />
 								</button>
 
 								<div className='logo'>
@@ -43,14 +37,10 @@ function Header() {
 								</div>
 							</div>
 
-							<Link to='/auth' className='nav-menu-sm-auth'>
-								<svg className='nav-menu-sm-auth__svg' width='20' height='20'>
-									<use href='icons.svg#person'></use>
-								</svg>
+							<Link to='/auth' onClick={closeMenu} className='nav-menu-sm-auth'>
+								<Svg id={'person'} wh={'20'} />
 
-								<span onClick={closeMenu} className='nav-menu-sm-auth__title'>
-									Войти
-								</span>
+								<span className='nav-menu-sm-auth__title'>Войти</span>
 							</Link>
 
 							<Link to='/products' onClick={closeMenu} className='nav__menu-item'>
@@ -65,6 +55,7 @@ function Header() {
 					</nav>
 				</div>
 			</Container>
+
 			{isActive && (
 				<motion.div
 					initial={{ opacity: 0 }}

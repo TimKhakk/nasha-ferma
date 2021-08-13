@@ -153,5 +153,18 @@
 		<path d="M17.6568 6.35652L6.34311 17.6702" stroke="black" stroke-width="2" stroke-linecap="round"/>
 	</symbol>
 
+	<!-- Mini minus  -->
+	<symbol id="mini-minus" width='10' height='1px' viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<rect
+			x='15'
+			y='0.5'
+			width='1'
+			height='15'
+			rx='0.5'
+			transform='rotate(90 15 0.5)'
+			fill='black'
+		/>
+	</symbol>
+
 
 </svg>

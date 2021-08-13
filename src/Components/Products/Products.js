@@ -2,7 +2,7 @@ import Breadcrumbs from '../Default/Breadcrumbs';
 import Container from '../Default/Container';
 import Categories from './Categories';
 import ProductCards from './ProductCards';
-import MiniCart from './MiniCart';
+import MiniCart from './MiniCart/MiniCart';
 
 function Products() {
 	return (

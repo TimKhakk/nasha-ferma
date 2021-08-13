@@ -1,188 +1,185 @@
-
 .mini-cart {
-    background: white;
-    border: 1px solid $secondary-color;
-    border-radius: 10px;
-    padding-bottom: 20px;
-    height: min-content;
-    display: flex;
-    flex-direction: column;
+	background: white;
+	border: 1px solid $secondary-color;
+	border-radius: 10px;
+	padding-bottom: 20px;
+	height: min-content;
+	display: flex;
+	flex-direction: column;
 
-    &_empty {
-        text-align: center;
-        padding: 30px 60px 30px 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
+	&_empty {
+		text-align: center;
+		padding: 30px 60px 30px 60px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+	}
 
-    &__title {
-        padding: 20px;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 30px;
-        background: $secondary-color;
-        border-top-left-radius:  10px;
-        border-top-right-radius:  10px;
-    }
+	&__title {
+		padding: 20px;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 30px;
+		background: $secondary-color;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
 }
 
 .mini-cart-item {
-    display: grid;
-    gap: 10px;
+	display: grid;
+	gap: 10px;
 
-    grid-template-columns: 25px 20px 25px 60px 50px 1fr;
-    grid-template-rows: 1fr 25px;
-    grid-column-gap: 5px;
+	grid-template-columns: 25px 20px 25px 60px 50px 1fr;
+	grid-template-rows: 1fr 25px;
+	grid-column-gap: 5px;
 
-    padding: 12px 20px;
-    border-top: 1px solid $secondary-color;
+	padding: 12px 20px;
+	border-top: 1px solid $secondary-color;
 
-    &__title {
-        grid-column: span 5;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 17px;
-    }
+	&__title {
+		grid-column: span 5;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 17px;
+	}
 
-    &__total-price {
-        display: grid;
-        align-items: center;
-        justify-content: flex-end;
-        font-size: 18px;
-        line-height: 22px;
-        font-weight: 600;
-        grid-row: span 2;
-    }
+	&__total-price {
+		display: grid;
+		align-items: center;
+		justify-content: flex-end;
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 600;
+		grid-row: span 2;
+	}
 
-    &__price {
-        display: grid;
-        align-items: center;
-        justify-content: flex-end;
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 500;
-    }
+	&__price {
+		display: grid;
+		align-items: center;
+		justify-content: flex-end;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 500;
+	}
 
-    &__total-count {
-        display: grid;
-        place-items: center;
-    }
+	&__total-count {
+		display: grid;
+		place-items: center;
+	}
 }
 
 .mini-cart-item__minus-btn,
 .mini-cart-item__plus-btn {
-    display: grid;
-    place-items: center;
-    border: none;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: $secondary-color;
-    font-size: 15px;
+	display: grid;
+	place-items: center;
+	border: none;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: $secondary-color;
+	font-size: 15px;
 }
 
 .mini-cart-item__btn-svg {
-    fill: $light-grey-color;
+	fill: $light-grey-color;
 }
 
 .mini-cart-item__delete-btn {
-    background: transparent;
-    display: grid;
-    align-self: center;
-    justify-self: flex-end;
-    border: none;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
+	background: transparent;
+	display: grid;
+	align-self: center;
+	justify-self: flex-end;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
 }
 
 .mini-cart-item__delete-btn-svg {
-    fill: $dark-grey-color;
+	fill: $dark-grey-color;
 }
 
 .mini-cart__buy {
-    color: white;
-    margin: auto;
-    width: 85%;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
-    border: none;
-    padding: 10px 25px;
-    cursor: pointer;
-    border-radius: 30px;
-    background: $primary-color;
+	color: white;
+	margin: auto;
+	width: 85%;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	border: none;
+	padding: 10px 25px;
+	cursor: pointer;
+	border-radius: 30px;
+	background: $primary-color;
 }
 
 .mini-cart__title_empty {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    color: $light-grey-color;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	color: $light-grey-color;
 }
 
 .container-sm-cart {
-    display: none;
+	display: none;
 }
-
 
 // 0 - $working-breakpoint
 @media screen and (max-width: $working-breakpoint) {
-    .mini-cart {
+	.mini-cart {
+		display: none;
+	}
 
-        display: none;
-    }
+	.container-sm-cart {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: white;
+		border-top: 1px solid #f3f3f3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 6px;
+		transition: 0.2s;
+		transform: translateY(100%);
 
+		&.active {
+			transform: translateY(0);
+		}
+	}
 
-    .container-sm-cart {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: white;
-        border-top: 1px solid #f3f3f3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 6px;
-        transition: .2s;
-        transform: translateY(100%);
+	.sm-cart {
+		display: grid;
+		color: white;
+		padding: 7px 30px;
+		background: $primary-color;
+		grid-template-columns: 1fr 1fr 1fr;
+		align-items: center;
+		border-radius: 30px;
+		flex: 1;
 
-        &.active {
-            transform: translateY(0);
-        }
-    }
+		&__delivery-time {
+			text-align: left;
+		}
 
-    .sm-cart {
-        display: grid;
-        color: white;
-        padding: 7px 30px;
-        background: $primary-color;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        border-radius: 30px;
-        flex: 1;
+		&__title {
+			text-align: center;
+		}
 
-        &__delivery-time {
-            text-align: left;
-        }
+		&__price {
+			text-align: right;
+		}
+	}
 
-        &__title {
-            text-align: center;
-        }
-
-        &__price {
-            text-align: right;
-        }
-    }
-
-    .mini-cart-item {
-        display: none;
-    }
-
+	.mini-cart-item {
+		display: none;
+	}
 }
