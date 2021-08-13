@@ -1,0 +1,38 @@
+// Default
+@import './Default/variables.scss';
+@import './Default/default.scss';
+@import './Default/container.scss';
+@import './Default/breadcrumbs.scss';
+
+// Header
+@import './Header/header.scss';
+
+// Homepage
+@import './Homepage/homepage.scss';
+@import './Homepage/homepage-main.scss';
+
+// PromoBlock
+@import './Homepage/promo-block.scss';
+@import './Homepage/promo-block-top.scss';
+@import './Homepage/mySwiper.scss';
+
+// Collection
+@import './Homepage/coll.scss';
+@import './Homepage/colls.scss';
+
+// Products
+@import './Products/products.scss';
+@import './Products/categories.scss';
+@import './Products/product-cards.scss';
+@import './Products/product-card-item.scss';
+@import './Products/mini-cart.scss';
+@import './Products/mini-cart-bottom.scss';
+
+// Cart page
+@import './Cart/cart.scss';
+@import './Cart/big-cart_empty.scss';
+
+// Footer
+@import './Footer/footer.scss';
+@import './Footer/footer-middle.scss';
+@import './Footer/footer-bottom.scss';

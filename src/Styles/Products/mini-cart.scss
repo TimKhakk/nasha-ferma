@@ -130,8 +130,8 @@
 	display: none;
 }
 
-// 0 - $working-breakpoint
-@media screen and (max-width: $working-breakpoint) {
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
 	.mini-cart {
 		display: none;
 	}
@@ -180,6 +180,13 @@
 	}
 
 	.mini-cart-item {
+		display: none;
+	}
+}
+
+// 576px - 1200px
+@media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-xl) {
+	.mini-cart {
 		display: none;
 	}
 }

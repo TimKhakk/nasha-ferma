@@ -1,71 +1,100 @@
 .footer-middle {
-  padding: 40px 0;
-  border-bottom: 1px solid $light-secondary-color;
+	padding: 40px 0;
+	border-bottom: 1px solid $light-secondary-color;
 
-  &__row {
-    display: grid;
-    grid-template-columns: 175px 160px 1fr;
-    gap: 75px;
-  }
+	&__row {
+		display: grid;
+		grid-template-columns: 175px 160px 1fr;
+		gap: 75px;
+	}
 
-  &__item {
-    display: flex;
-    flex-direction: column;
+	&__item {
+		display: flex;
+		flex-direction: column;
 
-    &:last-child {
-      justify-content: flex-end;
-      margin-left: auto;
-    }
-  }
+		&:last-child {
+			justify-content: flex-end;
+			margin-left: auto;
+		}
+	}
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
 
-  &__title {
-    font-weight: 700;
-    margin-bottom: 25px;
-    font-size: 24px;
-  }
+	&__title {
+		font-weight: 700;
+		margin-bottom: 25px;
+		font-size: 24px;
+	}
 
-
-  &-link {
-    font-size: 18px;
-  }
+	&-link {
+		font-size: 18px;
+	}
 }
 
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+	.footer-middle {
+		padding: 20px 0;
 
-// 0 - $working-breakpoint
-@media screen and (max-width: $breakpoints-md) {
-  .footer-middle {
-    padding: 20px 0;
+		&__row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 200px 300px;
+			gap: 25px;
+		}
+		&__item {
+			&:last-child {
+				justify-content: flex-end;
+				text-align: left;
+				margin-left: 0;
+			}
+		}
+		&__list {
+			gap: 10px;
+		}
 
-    &__row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 200px 300px;
-      gap: 25px;
-    }
-    &__item {
+		&__title {
+			margin-bottom: 15px;
+			font-size: 16px;
+		}
+		&__link {
+			font-size: 12px;
+		}
+	}
+}
 
-      &:last-child {
-        justify-content: flex-end;
-        text-align: left;
-        margin-left: 0;
-      }
-    }
-    &__list {
-      gap: 10px;
-    }
+// 576px - 768px
+@media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-xl) {
+	.footer-middle {
+		padding: 20px 0;
 
-    &__title {
-      margin-bottom: 15px;
-      font-size: 16px;
-    }
-    &__link {
-      font-size: 12px;
-    }
-  }
+		&__row {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: min-content;
+			gap: 25px;
+		}
+		&__item {
+			&:last-child {
+				justify-content: flex-end;
+				text-align: left;
+				margin-left: 0;
+			}
+		}
+		&__list {
+			gap: 20px;
+		}
+
+		&__title {
+			margin-bottom: 25px;
+			font-size: 24px;
+		}
+		&__link {
+			font-size: 18px;
+		}
+	}
 }

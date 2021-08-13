@@ -1,32 +1,39 @@
 .breadcrumbs {
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 500;
-    color: black;
-    padding: 22px 0;
-    border-top: 1px solid $light-secondary-color;
-    border-bottom: 1px solid $light-secondary-color;
-    margin-bottom: 40px;
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 500;
+	color: black;
+	padding: 22px 0;
+	border-top: 1px solid $light-secondary-color;
+	border-bottom: 1px solid $light-secondary-color;
+	margin-bottom: 40px;
 }
 
 .breadcrumb {
-    display: inline-flex;
-    align-items: center;
+	display: inline-flex;
+	align-items: center;
 }
 
 .breadcrumb_disabled {
-    color: $light-grey-color;
+	color: $light-grey-color;
 }
 
 .breadcrumb__arrow {
-    margin: 0 10px;
+	margin: 0 10px;
 }
 
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+	.breadcrumbs {
+		margin-bottom: 12px;
+		padding: 10px 0;
+	}
+}
 
-// 0 - $working-breakpoint
-@media screen and (max-width: $working-breakpoint) {
-    .breadcrumbs {
-      margin-bottom: 12px;
-      padding: 10px 0;
-    }
-  }
+// 576px - 768px
+@media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-md) {
+	.breadcrumbs {
+		margin-bottom: 15px;
+		padding: 15px 0;
+	}
+}

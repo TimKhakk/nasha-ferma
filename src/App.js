@@ -13,29 +13,25 @@ import Footer from './Components/Footer/Footer';
 import firebase from 'firebase';
 import config from './Firebase/config';
 
-import { StoreContextProvider } from './Context/StoreContext';
-
 firebase.initializeApp(config);
 
 function App() {
 	return (
-		<StoreContextProvider>
-			<div className='app'>
-				<Router>
-					<Header />
-					<Switch>
-						<Route path='/' exact component={Homepage} />
+		<div className='app'>
+			<Router>
+				<Header />
+				<Switch>
+					<Route path='/' exact component={Homepage} />
 
-						<Route path='/products' component={Products} />
+					<Route path='/products' component={Products} />
 
-						<Route path='/cart' component={Cart} />
+					<Route path='/cart' component={Cart} />
 
-						<Route path='/auth' component={Auth} />
-					</Switch>
-					<Footer />
-				</Router>
-			</div>
-		</StoreContextProvider>
+					<Route path='/auth' component={Auth} />
+				</Switch>
+				<Footer />
+			</Router>
+		</div>
 	);
 }
 

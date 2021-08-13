@@ -3,6 +3,7 @@ import CartItem from './CartItem';
 import Order from './Order';
 
 import { useStoreContext } from '../../Context/StoreContext';
+import CartEmpty from './CartEmpty';
 
 function Cart() {
 	const { cart, countTotalPrice } = useStoreContext();
@@ -18,19 +19,18 @@ function Cart() {
 				name={'Корзина'}
 			/>
 			<div className='container'>
-				<div className='cart-row'>
-					<div className='big-cart-items'>
-						{cart.map(item => {
-							return <CartItem item={item} />;
-						})}
-					</div>
-
-					{cart.length === 0 ? (
-						<div className='mini-cart_empty'>Корзина пуста</div>
-					) : (
+				{cart.length === 0 ? (
+					<CartEmpty />
+				) : (
+					<div className='cart-row'>
+						<div className='big-cart-items'>
+							{cart.map(item => {
+								return <CartItem item={item} />;
+							})}
+						</div>
 						<Order countTotalPrice={countTotalPrice} />
-					)}
-				</div>
+					</div>
+				)}
 			</div>
 		</>
 	);
