@@ -3,7 +3,7 @@ import { useStoreContext } from '../../../Context/StoreContext';
 
 import MiniCartEmpty from './MiniCartEmpty';
 import MiniCartNotEmpty from './MiniCartNotEmpty';
-import MiniCartForSmallerScreens from './MiniCartForSmallerScreens';
+import CartForSmallerScreens from '../../Default/CartForSmallerScreens';
 import MiniCartItem from './MiniCartItem';
 
 function MiniCart() {
@@ -22,7 +22,7 @@ function MiniCart() {
 				{cart.length === 0 ? <MiniCartEmpty /> : <MiniCartNotEmpty />}
 			</div>
 
-			<MiniCartForSmallerScreens />
+			<CartForSmallerScreens />
 		</>
 	);
 }

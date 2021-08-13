@@ -1,6 +1,7 @@
-import React from 'react';
+import { useStoreContext } from '../../Context/StoreContext';
 
-const Order = ({ countTotalPrice }) => {
+const Order = () => {
+	const { countTotalPrice } = useStoreContext();
 	return (
 		<div className='big-cart-side'>
 			<div className='big-cart-side-title'>Ваш заказ</div>

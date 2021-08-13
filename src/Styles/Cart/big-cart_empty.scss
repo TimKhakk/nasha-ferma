@@ -1,7 +1,7 @@
 .big-cart_empty {
 	min-height: calc(90vh - 156px);
 	text-align: center;
-	padding: 30px 60px 30px 60px;
+	padding: 30px 60px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -10,5 +10,16 @@
 
 	&__title {
 		font-size: 36px;
+	}
+}
+
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+	.big-cart_empty {
+		padding: 0 60px;
+
+		&__title {
+			font-size: 30px;
+		}
 	}
 }

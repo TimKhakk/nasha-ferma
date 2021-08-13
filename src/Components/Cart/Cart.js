@@ -1,12 +1,13 @@
-import Breadcrumbs from '../Default/Breadcrumbs';
-import CartItem from './CartItem';
-import Order from './Order';
-
 import { useStoreContext } from '../../Context/StoreContext';
+
+import Breadcrumbs from '../Default/Breadcrumbs';
 import CartEmpty from './CartEmpty';
+import Container from '../Default/Container';
+import CartNotEmpty from './CartNotEmpty';
+import CartForSmallerScreens from '../Default/CartForSmallerScreens';
 
 function Cart() {
-	const { cart, countTotalPrice } = useStoreContext();
+	const { cart } = useStoreContext();
 	return (
 		<>
 			<Breadcrumbs
@@ -18,20 +19,11 @@ function Cart() {
 				]}
 				name={'Корзина'}
 			/>
-			<div className='container'>
-				{cart.length === 0 ? (
-					<CartEmpty />
-				) : (
-					<div className='cart-row'>
-						<div className='big-cart-items'>
-							{cart.map(item => {
-								return <CartItem item={item} />;
-							})}
-						</div>
-						<Order countTotalPrice={countTotalPrice} />
-					</div>
-				)}
+			<div className='cart'>
+				<Container>{cart.length === 0 ? <CartEmpty /> : <CartNotEmpty />}</Container>
 			</div>
+
+			<CartForSmallerScreens />
 		</>
 	);
 }
