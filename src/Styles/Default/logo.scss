@@ -1,0 +1,28 @@
+.logo a {
+	color: $primary-color;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 37px;
+	cursor: pointer;
+	transition: color 0.2s;
+	display: grid;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+// 0 - 992px
+@media screen and (max-width: $breakpoints-lg) {
+	.logo a {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+// 1200px - infinite
+@media screen and (min-width: $breakpoints-xl) {
+	.logo a {
+		&:hover {
+			color: $dark-primary-color;
+		}
+	}
+}

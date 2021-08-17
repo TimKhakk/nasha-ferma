@@ -166,5 +166,22 @@
 		/>
 	</symbol>
 
+	<!-- plus  -->
+	<symbol viewBox='0 0 15 15' width='15' height='15' id='plus'>
+		<rect x='7' y='0.5' width='1' height='15' rx='0.5' />
+		<rect x='15' y='7.5' width='1' height='15' rx='0.5' transform='rotate(90 15 7.5)' />
+	</symbol>
+
+	<!-- minus  -->
+	<symbol width='15' height='2px' id='minus'>
+		<rect
+			x='15'
+			y='0.5'
+			width='1'
+			height='15'
+			rx='0.5'
+			transform='rotate(90 15 0.5)'
+		/>
+	</symbol>
 
 </svg>

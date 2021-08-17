@@ -1,5 +1,4 @@
 import { createContext, useContext } from 'react';
-
 import { data } from '../data';
 
 // Hooks
@@ -15,9 +14,12 @@ export const StoreContextProvider = ({ children }) => {
 
 	const changeCategory = category => setCategory(() => category);
 
-	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молчные продукты"]
+	const сategories = [...new Set(data.map(item => item.category))]; // ["Овощи", "Молочные продукты"]
+
 	const products = сategories.map(category => data.filter(item => item.category === category)); //  [ [], [] ]
+
 	const categoriedProducts = data.filter(item => item.category === category); // [{"Овощи"}, {"Овощи"}]
+
 	const groups = [...new Set(categoriedProducts.map(item => item.group))]; // ["Огурцы", "Томаты"]
 
 	const plusProductToCart = id => {

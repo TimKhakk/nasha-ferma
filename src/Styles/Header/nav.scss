@@ -1,0 +1,154 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+
+	&__menu {
+		display: flex;
+		gap: 28px;
+	}
+
+	&__menu-item {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		font-weight: 500;
+	}
+
+	&-menu-sm-top {
+		display: none;
+		gap: 16px;
+		padding: 16px;
+	}
+
+	&-menu-sm-top__close {
+		height: 24px;
+	}
+
+	&-menu-sm-auth {
+		display: none;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 10px;
+		border-top: 6px solid #f3f3f3;
+		border-bottom: 6px solid #f3f3f3;
+		padding: 12px 16px;
+		background: inherit;
+	}
+
+	&-menu-sm-auth__title {
+		font-size: 16px;
+		font-weight: 600;
+		font-family: Gilroy, sans-serif;
+		color: black;
+		line-height: 24px;
+	}
+
+	&__side {
+		display: flex;
+		gap: 15px;
+	}
+
+	&__side-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		padding: 10px 15px;
+		border-radius: 38px;
+		background: $primary-color;
+		color: white;
+		fill: white;
+	}
+
+	&__side-item-auth {
+		display: none;
+	}
+}
+
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+	.nav {
+		&__menu {
+			width: 70%;
+		}
+	}
+}
+
+// 576px - 992px
+@media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-lg) {
+	.nav {
+		&__menu {
+			width: 30%;
+		}
+	}
+}
+
+// 0 - 992px
+@media screen and (max-width: $breakpoints-lg) {
+	.nav {
+		&__menu {
+			z-index: 20;
+			transition-duration: 0.2s;
+			justify-content: flex-start;
+			flex-direction: column;
+			display: flex;
+			position: fixed;
+			overflow-x: hidden;
+			gap: 0;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			background: white;
+			border: 1px solid #e1e1e1;
+			padding: 0;
+			transform: translateX(-100%);
+		}
+
+		&__menu_active {
+			transform: translateX(0%);
+			box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.4);
+		}
+
+		&__menu-item {
+			font-size: 18px;
+			font-weight: 600;
+			font-family: Gilroy, sans-serif;
+			color: black;
+			line-height: 24px;
+			margin: 12px 16px;
+		}
+
+		&-menu-sm-top {
+			display: flex;
+		}
+
+		&-menu-sm-auth {
+			display: flex;
+		}
+
+		&__side-item-cart-title,
+		.nav__side-item-auth-title {
+			display: none;
+		}
+
+		&__side-item {
+			justify-content: center;
+			height: 34px;
+			width: 34px;
+			padding: 0;
+			background: $secondary-color;
+		}
+
+		.nav__side-item-cart,
+		.nav__side-item-auth {
+			fill: $dark-grey-color;
+		}
+		.nav__side-item-cart {
+			width: 18px !important;
+			height: 18px !important;
+		}
+		.nav__side-item-auth {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.button {
+	display: grid;
+	place-items: center;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	transition: background 0.2s;
+}
+
+.green {
+	background: $light-primary-color;
+
+	&:hover {
+		background: $light-hovered-primary-color;
+	}
+}

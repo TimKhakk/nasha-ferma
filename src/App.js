@@ -20,6 +20,7 @@ function App() {
 		<div className='app'>
 			<Router>
 				<Header />
+
 				<Switch>
 					<Route path='/' exact component={Homepage} />
 
@@ -29,6 +30,7 @@ function App() {
 
 					<Route path='/auth' component={Auth} />
 				</Switch>
+
 				<Footer />
 			</Router>
 		</div>

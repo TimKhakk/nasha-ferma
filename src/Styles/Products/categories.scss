@@ -29,18 +29,10 @@
 		cursor: pointer;
 		transition: background 0.2s, color 0.2s;
 
-		&:hover {
-			background: $light-secondary-color;
-		}
-
 		&:last-child {
 			padding-bottom: 25px;
 			border-bottom-left-radius: 10px;
 			border-bottom-right-radius: 10px;
-		}
-
-		&:hover .categories__item-count {
-			color: $dark-grey-color;
 		}
 
 		&-title {
@@ -100,6 +92,34 @@
 
 			&-count {
 				display: none;
+			}
+		}
+	}
+}
+
+// 0 - 1200px
+@media screen and (max-width: $breakpoints-xl) {
+	.categories {
+		&__item {
+			&:active {
+				background: $light-secondary-color;
+			}
+			&:active .categories__item-count {
+				color: $dark-grey-color;
+			}
+		}
+	}
+}
+
+// 1200px - infinite
+@media screen and (min-width: $breakpoints-xl) {
+	.categories {
+		&__item {
+			&:hover {
+				background: $light-secondary-color;
+			}
+			&:hover .categories__item-count {
+				color: $dark-grey-color;
 			}
 		}
 	}
