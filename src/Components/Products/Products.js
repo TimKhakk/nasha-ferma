@@ -1,8 +1,8 @@
 import Breadcrumbs from '../Default/Breadcrumbs';
 import Container from '../Default/Container';
 import Categories from './Categories';
-import ProductCards from './ProductCards/ProductCards';
 import MiniCart from './MiniCart/MiniCart';
+import Groups from './ProductCards/Groups';
 
 function Products() {
 	return (
@@ -13,7 +13,7 @@ function Products() {
 				<div className='products__row'>
 					<Categories />
 
-					<ProductCards />
+					<Groups />
 
 					<MiniCart />
 				</div>

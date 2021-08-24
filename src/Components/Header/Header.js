@@ -27,7 +27,7 @@ function Header() {
 						<ul className={isActive ? 'nav__menu nav__menu_active' : 'nav__menu'}>
 							<div className='nav-menu-sm-top'>
 								<button onClick={closeMenu} className='nav-menu-sm-top__close'>
-									<Svg id={'cross'} wh={'24'} />
+									<Svg id={'cross'} w={'24'} h={'24'} />
 								</button>
 
 								<div className='logo'>
@@ -38,7 +38,7 @@ function Header() {
 							</div>
 
 							<Link to='/auth' onClick={closeMenu} className='nav-menu-sm-auth'>
-								<Svg id={'person'} wh={'20'} />
+								<Svg id={'person'} w={'20'} h={'20'} />
 
 								<span className='nav-menu-sm-auth__title'>Войти</span>
 							</Link>

@@ -7,52 +7,49 @@ const ProductCard = ({ data }) => {
 	const { id, name, price, weight, imgUrl } = data;
 
 	return (
-		<div key={id} className='product-card-item'>
-			<div className='product-card-item__img-block'>
-				<motion.img
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ delay: 0.2 }}
-					src={imgUrl}
-					alt={name}
-					className='product-card-item__img'
-				/>
+		<div key={id} className='product'>
+			<div className='top'>
+				<div className='rating'>
+					<Svg id='star' w='12' h='11' />5
+				</div>
+				<button className='info'>
+					<Svg id='info' w='21' h='20' />
+				</button>
 			</div>
+			<motion.img
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 0.2 }}
+				src={imgUrl}
+				alt={name}
+				className='img'
+			/>
 
-			<p className='product-card-item__title'>{name}</p>
+			<p className='title'>{name}</p>
 
-			<span className='product-card-item__weight'>
+			<span className='weight'>
 				{weight >= 1000 ? <>{weight / 1000} кг</> : <>{weight} г</>}
 			</span>
 
 			{cart.find(item => item.id === id) ? (
-				<div className='product-card-item__btns-block'>
-					<button
-						className='product-card-item__minus-btn'
-						onClick={() => minusProductToCart(id)}
-					>
+				<div className='buttons'>
+					<button className='minus' onClick={() => minusProductToCart(id)}>
 						<Svg id='minus' w='15' h='2' color='#0BA360' />
 					</button>
 
-					<span className='product-card-item__total-count'>
-						{cart.map(item => item.id === id && item.count)}
-					</span>
+					<span className='count'>{cart.map(item => item.id === id && item.count)}</span>
 
 					<button
 						onClick={() => {
 							plusProductToCart(id);
 						}}
-						className='product-card-item__plus-btn'
+						className='plus'
 					>
 						<Svg id='plus' w='15' h='15' color='#0BA360' />
 					</button>
 				</div>
 			) : (
-				<button
-					key={id}
-					className='product-card-item__btn-add-to-cart'
-					onClick={() => addProductToCart(id)}
-				>
+				<button key={id} className='add' onClick={() => addProductToCart(id)}>
 					{price} ₽
 				</button>
 			)}

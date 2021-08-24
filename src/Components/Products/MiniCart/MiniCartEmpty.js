@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Svg from '../../Default/Svg';
 
 const MiniCartEmpty = () => {
 	return (
@@ -8,15 +9,7 @@ const MiniCartEmpty = () => {
 			animate={{ opacity: 1 }}
 			className='mini-cart_empty'
 		>
-			<svg
-				className='nav__side-item-cart'
-				width='66'
-				height='65'
-				viewBox='0 0 66 65'
-				style={{ fill: '#9F9F9F' }}
-			>
-				<use href='icons.svg#cart'></use>
-			</svg>
+			<Svg id='cart' w='66' h='65' color='#9F9F9F' />
 			<span className='mini-cart__title_empty'>
 				Выберите товары
 				<br />и добавьте их к заказу

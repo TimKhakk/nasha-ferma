@@ -7,7 +7,6 @@ const MiniCartItem = ({ item }) => {
 	const { plusProductToCart, deleteProduct, minusProductToCart } = useStoreContext();
 	return (
 		<motion.div
-			layout
 			key={id}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}

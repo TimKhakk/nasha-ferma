@@ -1,21 +1,19 @@
-.product-cards {
+.groups {
 	display: flex;
 	flex-direction: column;
 }
 
-.product-card {
+.group {
 	display: flex;
 	flex-direction: column;
 	padding: 0 0 10px;
 
-	&__title {
+	.group__title {
+		@include font(24px, 700, black, 30px);
 		padding: 20px 0;
-		font-size: 24px;
-		font-weight: 700;
-		line-height: 30px;
 	}
 
-	&__items {
+	.items {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		flex-wrap: wrap;
@@ -25,13 +23,13 @@
 
 // 0 - 576px
 @media screen and (max-width: $breakpoints-sm) {
-	.product-card {
-		&__items {
+	.group {
+		.items {
 			grid-template-columns: 1fr 1fr;
 			gap: 15px;
 		}
 
-		&__title {
+		.group__title {
 			padding: 10px 0;
 			font-size: 20px;
 			font-weight: 600;
@@ -42,13 +40,13 @@
 
 // 576px - 768px
 @media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-md) {
-	.product-card {
-		&__items {
+	.group {
+		.items {
 			grid-template-columns: 1fr 1fr;
 			gap: 26px;
 		}
 
-		&__title {
+		.group__title {
 			padding: 10px 0;
 			font-size: 24px;
 			font-weight: 600;

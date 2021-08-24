@@ -1,21 +1,13 @@
 export const data = [
 	{
-		id: 2,
-		name: 'Огурец гладкий среднеплодный',
-		price: 79,
-		weight: 1000,
-		category: 'Овощи',
-		group: 'Огурцы',
-		imgUrl: 'https://api.magonline.ru/thumbnail/370x370/12/290/12290.png',
-	},
-	{
 		id: 3,
 		name: 'Огурец Малика',
-		price: 549,
+		price: 249,
 		weight: 1000,
 		category: 'Овощи',
 		group: 'Огурцы',
-		imgUrl: 'https://quality-seeds.ru/upload/iblock/525/525f7901cd097b76617d2151491cd1fe.png',
+		imgUrl: 'webp125/огурец малика_125.webp',
+		bigImgUrl: 'awif245/огурец малика_245.awif',
 	},
 	{
 		id: 4,
@@ -24,7 +16,8 @@ export const data = [
 		weight: 1000,
 		category: 'Овощи',
 		group: 'Огурцы',
-		imgUrl: 'https://profpacket.ru/wp-content/uploads/2018/04/ogurci_b.png',
+		imgUrl: 'webp125/огурец сладкий_125.webp',
+		bigImgUrl: 'awif245/огурец сладкий_245.awif',
 	},
 	{
 		id: 5,
@@ -33,7 +26,8 @@ export const data = [
 		weight: 1000,
 		category: 'Овощи',
 		group: 'Огурцы',
-		imgUrl: 'https://aroma-profi.ru/upload/iblock/36c/36c7320ab9063306eabcfe9e4c05018d.png',
+		imgUrl: 'webp125/огурец зозуля_125.webp',
+		bigImgUrl: 'awif245/огурец зозуля_245.awif',
 	},
 	{
 		id: 6,
@@ -42,16 +36,18 @@ export const data = [
 		weight: 1000,
 		category: 'Овощи',
 		group: 'Огурцы',
-		imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVmu2NjuuVlK498ymzFHWGL3rhRLS6JuyERw&usqp=CAU',
+		imgUrl: 'webp125/огурец малика_125.webp',
+		bigImgUrl: 'awif245/огурец малика_245.awif',
 	},
 	{
 		id: 7,
-		name: 'Томато',
+		name: 'Томаты',
 		price: 79,
 		weight: 1000,
 		category: 'Овощи',
 		group: 'Томаты',
-		imgUrl: 'http://tknso.ru/images/teplica-catalog-555x417_1/item/cbf4rzcxwj.png',
+		imgUrl: 'webp125/томаты_125.webp',
+		bigImgUrl: 'awif245/томаты_245.awif',
 	},
 	{
 		id: 11,
@@ -60,7 +56,8 @@ export const data = [
 		weight: 1000,
 		category: 'Овощи',
 		group: 'Томаты',
-		imgUrl: 'https://imgproxy.sbermarket.ru/imgproxy/size-500-500/aHR0cHM6Ly9zYmVybWFya2V0LnJ1L3NwcmVlL3Byb2R1Y3RzLzE1NjA0MDMvb3JpZ2luYWwvMTk3MzgxXzEucG5nPzE2MDc4NTg0MjQ.png',
+		imgUrl: 'webp125/помидоры розовые_125.webp',
+		bigImgUrl: 'awif245/помидоры розовые_245.awif',
 	},
 	{
 		id: 12,
@@ -69,7 +66,8 @@ export const data = [
 		weight: 100,
 		category: 'Молочные продукты',
 		group: 'Сыры',
-		imgUrl: 'https://zakaz.spar-kaliningrad.ru/upload/iblock/dda/dda70ce4ef56543ab18012e42717dc18.png',
+		imgUrl: 'webp125/сыр сметанковый_125.webp',
+		bigImgUrl: 'awif245/сыр сметанковый_245.awif',
 	},
 	{
 		id: 13,
@@ -78,7 +76,8 @@ export const data = [
 		weight: 100,
 		category: 'Молочные продукты',
 		group: 'Сыры',
-		imgUrl: 'https://cheese-home.com//files/materials/рецепты/монтерей%20джек/jack.png',
+		imgUrl: 'webp125/сыр зигеркейз_125.webp',
+		bigImgUrl: 'awif245/сыр зигеркейз_245.awif',
 	},
 	{
 		id: 14,
@@ -87,7 +86,8 @@ export const data = [
 		weight: 100,
 		category: 'Молочные продукты',
 		group: 'Сыры',
-		imgUrl: 'http://cheasy.ru/img/cms/российский.png',
+		imgUrl: 'webp125/сыр росс_125.webp',
+		bigImgUrl: 'awif245/сыр росс_245.awif',
 	},
 	{
 		id: 15,
@@ -96,7 +96,8 @@ export const data = [
 		weight: 100,
 		category: 'Молочные продукты',
 		group: 'Сыры',
-		imgUrl: 'https://vincenzo-pizza.com.ua/userfiles/additives/20200614110315kisspng_blue_cheese_milk_goat_cheese_roquefort_5b08c4d89d29515864376615273013366438.png.pagespeed.ce.gA4sknRj_r.png',
+		imgUrl: 'webp125/сыр рокфор_125.webp',
+		bigImgUrl: 'awif245/сыр рокфор_245.awif',
 	},
 	{
 		id: 16,
@@ -105,7 +106,8 @@ export const data = [
 		weight: 100,
 		category: 'Ягоды',
 		group: 'Ягоды',
-		imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsupermalina.ru%2Fwp-content%2Fuploads%2F2018%2F03%2Fgolubika.png&f=1&nofb=1',
+		imgUrl: 'webp125/голубика_125.webp',
+		bigImgUrl: 'awif245/голубика_245.awif',
 	},
 	{
 		id: 17,
@@ -114,7 +116,8 @@ export const data = [
 		weight: 100,
 		category: 'Ягоды',
 		group: 'Ягоды',
-		imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F53%2F82%2F0b%2F53820b4fc40ce49844c59ae532188459.png&f=1&nofb=1',
+		imgUrl: 'webp125/клубника_125.webp',
+		bigImgUrl: 'awif245/клубника_245.awif',
 	},
 	{
 		id: 18,
@@ -123,7 +126,7 @@ export const data = [
 		weight: 100,
 		category: 'Ягоды',
 		group: 'Ягоды',
-		imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.stollerukraine.com.ua%2Fassets%2Fimages%2Fmalina-prod.png&f=1&nofb=1',
+		imgUrl: 'webp125/малина_125.webp',
+		bigImgUrl: 'awif245/малина_245.awif',
 	},
-
 ];

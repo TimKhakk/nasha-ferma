@@ -1,0 +1,136 @@
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10px;
+	height: 300px;
+	border-radius: 10px;
+	border: 1px solid $secondary-color;
+	background: white;
+	padding: 18px;
+	transition: box-shadow 0.2s;
+
+	.top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.rating {
+			background: $light-primary-color;
+			padding: 2px 6px;
+			border-radius: 10px;
+			font-size: 12px;
+
+			svg {
+				margin-right: 7.5px;
+			}
+		}
+	}
+
+	.img {
+		width: 125px;
+		align-self: center;
+	}
+
+	.title {
+		font-size: 15px;
+		line-height: 21px;
+		font-weight: 600;
+	}
+
+	.weight {
+		font-size: 14px;
+		line-height: 18px;
+		color: #888;
+		font-weight: 600;
+	}
+
+	.buttons {
+		display: grid;
+		grid-template-columns: min-content 1fr min-content;
+		margin: 0px 15px;
+		gap: 10px;
+	}
+
+	.count {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 20px;
+	}
+
+	.minus,
+	.plus {
+		display: grid;
+		place-items: center;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		background: $light-primary-color;
+		transition: background 0.2s;
+	}
+	.minus-svg .plus-svg {
+		fill: #0ba360;
+	}
+	.add {
+		font-family: 'Gilroy', sans-serif;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 20px;
+		height: 35px;
+		border: none;
+		padding: 5px 25px;
+		cursor: pointer;
+		border-radius: 30px;
+		background: $light-primary-color;
+		transition: background 0.2s;
+	}
+}
+
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
+	.product {
+		padding: 12px;
+		height: 270px;
+
+		&__btns-block {
+			margin: 0;
+		}
+	}
+}
+
+// 576px - 768px
+@media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-md) {
+	.product {
+		padding: 18px;
+		height: 270px;
+	}
+}
+
+// 0 - 1200px
+@media screen and (max-width: $breakpoints-xl) {
+	.product {
+		.minus:active,
+		.plus:active {
+			background: $light-hovered-primary-color;
+		}
+	}
+}
+
+// 1200px - infinite
+@media screen and (min-width: $breakpoints-xl) {
+	.product {
+		&:hover {
+			box-shadow: 0 6px 12px -6px rgba(24, 39, 75, 0.08),
+				0 8px 24px -4px rgba(24, 39, 75, 0.05);
+		}
+
+		.minus:hover,
+		.plus:hover,
+		.add:hover {
+			background: $light-hovered-primary-color;
+		}
+	}
+}

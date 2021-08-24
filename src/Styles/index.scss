@@ -5,6 +5,9 @@
 @import './Default/breadcrumbs.scss';
 @import './Default/logo.scss';
 @import './Default/button.scss';
+@import './Default/mixins/display-mixins.scss';
+@import './Default/mixins/font-mixins.scss';
+@import './Default/mixins/screen-mixins.scss';
 
 // Header
 @import './Header/header.scss';
@@ -25,9 +28,12 @@
 
 // Products
 @import './Products/products.scss';
-@import './Products/categories.scss';
-@import './Products/product-cards.scss';
-@import './Products/product-card-item.scss';
+@import './Products/product.scss';
+
+@import './Products/categories/categories.scss';
+@import './Products/categories/category.scss';
+
+@import './Products/groups.scss';
 @import './Products/mini-cart.scss';
 @import './Products/mini-cart-bottom.scss';
 

@@ -1,0 +1,38 @@
+@mixin font($size, $weight, $color, $line-height) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+	line-height: $line-height;
+}
+
+@mixin h1() {
+	@include font(55px, 700, $secondary, 60px);
+}
+
+@mixin h1-h2-subtitle($color: $dark-blue) {
+	@include font(20px, 400, $color, 32px);
+}
+
+@mixin h2($color: $secondary) {
+	@include font(45px, 700, $color, 43px);
+}
+
+@mixin h3($color: $secondary) {
+	@include font(30px, 700, $color, 36px);
+}
+
+@mixin h3-subtitle($color: $dark-blue) {
+	@include font(18px, 400, $color, 28px);
+}
+
+@mixin md-font($color: $dark-blue) {
+	@include font(16px, 400, $color, 24px);
+}
+
+@mixin sm-font($color: $dark-blue) {
+	@include font(14px, 400, $color, 22px);
+}
+
+@mixin xs-font($color: $dark-blue) {
+	@include font(10px, 400, $color, 16px);
+}

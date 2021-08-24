@@ -1,0 +1,38 @@
+.categories {
+	background: $secondary-color;
+	border-radius: 10px;
+	padding: 20px 0px 0 0px;
+	display: flex;
+	flex-direction: column;
+	height: min-content;
+
+	.items {
+		@include flex(center, stretch, column);
+	}
+
+	.title {
+		@include font(24px, 700, black, 30px);
+		padding: 0 40px 20px 40px;
+	}
+}
+
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+	.categories {
+		background: transparent;
+		border-radius: 0;
+		padding: 0;
+		height: min-content;
+
+		.items {
+			flex-direction: row;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.title {
+			display: none;
+		}
+	}
+}
