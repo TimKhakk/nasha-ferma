@@ -1,5 +1,5 @@
 .logo a {
-	color: $primary-color;
+	color: $primary;
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 37px;
@@ -22,7 +22,7 @@
 @media screen and (min-width: $breakpoints-xl) {
 	.logo a {
 		&:hover {
-			color: $dark-primary-color;
+			color: $dark-primary;
 		}
 	}
 }

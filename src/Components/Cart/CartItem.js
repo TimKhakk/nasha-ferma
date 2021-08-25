@@ -2,7 +2,7 @@ import React from 'react';
 import { useStoreContext } from '../../Context/StoreContext';
 
 const CartItem = ({ item }) => {
-	const { plusProductToCart, deleteProduct, minusProductToCart } = useStoreContext();
+	const { plusProduct, removeProduct, minusProduct } = useStoreContext();
 	const { id, imgUrl, name, weight, price, count } = item;
 
 	return (
@@ -20,7 +20,7 @@ const CartItem = ({ item }) => {
 			</div>
 
 			<div className='big-cart-item__btns-block'>
-				<button className='big-cart-item__minus-btn' onClick={() => minusProductToCart(id)}>
+				<button className='big-cart-item__minus-btn' onClick={() => minusProduct(id)}>
 					<svg className='big-cart-item__btn-svg' width='8px' height='2px'>
 						<use href='icons.svg#minus-big-cart'></use>
 					</svg>
@@ -28,7 +28,7 @@ const CartItem = ({ item }) => {
 
 				<span className='mini-cart-item__total-count'>{count}</span>
 
-				<button onClick={() => plusProductToCart(id)} className='big-cart-item__plus-btn'>
+				<button onClick={() => plusProduct(id)} className='big-cart-item__plus-btn'>
 					<svg className='big-cart-item__btn-svg' viewBox='0 0 10 10' width='8px' height='8px'>
 						<use href='icons.svg#plus-big-cart'></use>
 					</svg>
@@ -38,7 +38,7 @@ const CartItem = ({ item }) => {
 			<div className='big-cart-item__total-price-block'>{price * count} ₽</div>
 
 			<div className='big-cart-item__delete-btn-block'>
-				<button className='big-cart-item__delete-btn' onClick={() => deleteProduct(id)}>
+				<button className='big-cart-item__delete-btn' onClick={() => removeProduct(id)}>
 					<svg
 						className='mini-cart-item__delete-btn-svg'
 						viewBox='0 0 20 20'

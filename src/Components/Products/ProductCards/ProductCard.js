@@ -3,8 +3,14 @@ import { motion } from 'framer-motion';
 import { useStoreContext } from '../../../Context/StoreContext';
 
 const ProductCard = ({ data }) => {
-	const { cart, plusProductToCart, minusProductToCart, addProductToCart } = useStoreContext();
+	const { cart, plusProduct, minusProduct, addProduct, toggleModal, setSelProduct } =
+		useStoreContext();
 	const { id, name, price, weight, imgUrl } = data;
+
+	const showModal = () => {
+		setSelProduct(data);
+		toggleModal();
+	};
 
 	return (
 		<div key={id} className='product'>
@@ -12,7 +18,7 @@ const ProductCard = ({ data }) => {
 				<div className='rating'>
 					<Svg id='star' w='12' h='11' />5
 				</div>
-				<button className='info'>
+				<button className='info' onClick={showModal}>
 					<Svg id='info' w='21' h='20' />
 				</button>
 			</div>
@@ -33,7 +39,7 @@ const ProductCard = ({ data }) => {
 
 			{cart.find(item => item.id === id) ? (
 				<div className='buttons'>
-					<button className='minus' onClick={() => minusProductToCart(id)}>
+					<button className='minus' onClick={() => minusProduct(id)}>
 						<Svg id='minus' w='15' h='2' color='#0BA360' />
 					</button>
 
@@ -41,7 +47,7 @@ const ProductCard = ({ data }) => {
 
 					<button
 						onClick={() => {
-							plusProductToCart(id);
+							plusProduct(id);
 						}}
 						className='plus'
 					>
@@ -49,7 +55,7 @@ const ProductCard = ({ data }) => {
 					</button>
 				</div>
 			) : (
-				<button key={id} className='add' onClick={() => addProductToCart(id)}>
+				<button key={id} className='add' onClick={() => addProduct(id)}>
 					{price} ₽
 				</button>
 			)}

@@ -1,6 +1,6 @@
 .category {
 	@include flex(space-between);
-	border-top: 1px solid $light-secondary-color;
+	border-top: 1px solid $light-secondary;
 	padding: 20px 40px;
 	cursor: pointer;
 	transition: background 0.2s, color 0.2s;
@@ -13,7 +13,7 @@
 
 	.category__title {
 		font-weight: 500;
-		color: $dark-grey-color;
+		color: $dark-grey;
 	}
 
 	.count {
@@ -21,7 +21,7 @@
 		text-align: center;
 		width: 26px;
 		height: 26px;
-		background: $light-secondary-color;
+		background: $light-secondary;
 		border-radius: 50%;
 		font-weight: 500;
 		color: #afafaf;
@@ -32,7 +32,7 @@
 @media screen and (max-width: $breakpoints-sm) {
 	.category {
 		@include flex(space-between);
-		background: $secondary-color;
+		background: $secondary;
 		border: none;
 		border-radius: 20px;
 		padding: 7px 20px;
@@ -52,10 +52,10 @@
 @media screen and (max-width: $breakpoints-xl) {
 	.category {
 		&:active {
-			background: $light-secondary-color;
+			background: $light-secondary;
 		}
 		&:active .categories__item-count {
-			color: $dark-grey-color;
+			color: $dark-grey;
 		}
 	}
 }
@@ -64,10 +64,10 @@
 @media screen and (min-width: $breakpoints-xl) {
 	.category {
 		&:hover {
-			background: $light-secondary-color;
+			background: $light-secondary;
 		}
 		&:hover .categories__item-count {
-			color: $dark-grey-color;
+			color: $dark-grey;
 		}
 	}
 }

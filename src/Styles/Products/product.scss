@@ -5,7 +5,7 @@
 	gap: 10px;
 	height: 300px;
 	border-radius: 10px;
-	border: 1px solid $secondary-color;
+	border: 1px solid $secondary;
 	background: white;
 	padding: 18px;
 	transition: box-shadow 0.2s;
@@ -16,7 +16,7 @@
 		align-items: center;
 
 		.rating {
-			background: $light-primary-color;
+			background: $light-primary;
 			padding: 2px 6px;
 			border-radius: 10px;
 			font-size: 12px;
@@ -68,7 +68,7 @@
 		width: 35px;
 		height: 35px;
 		border-radius: 50%;
-		background: $light-primary-color;
+		background: $light-primary;
 		transition: background 0.2s;
 	}
 	.minus-svg .plus-svg {
@@ -84,7 +84,7 @@
 		padding: 5px 25px;
 		cursor: pointer;
 		border-radius: 30px;
-		background: $light-primary-color;
+		background: $light-primary;
 		transition: background 0.2s;
 	}
 }
@@ -114,7 +114,7 @@
 	.product {
 		.minus:active,
 		.plus:active {
-			background: $light-hovered-primary-color;
+			background: $light-hovered-primary;
 		}
 	}
 }
@@ -130,7 +130,7 @@
 		.minus:hover,
 		.plus:hover,
 		.add:hover {
-			background: $light-hovered-primary-color;
+			background: $light-hovered-primary;
 		}
 	}
 }

@@ -1,0 +1,111 @@
+.modal-bg {
+	@include flex(center, center);
+	height: 100vh;
+	width: 100vw;
+	background: rgba($color: #000000, $alpha: 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	background: white;
+	width: 900px;
+	padding: 40px 100px;
+	border-radius: 10px;
+	height: 500px;
+	z-index: 9999;
+	filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.14))
+		drop-shadow(0px 6px 30px rgba(0, 0, 0, 0.12)) drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.2));
+
+	.content {
+		@include grid(max-content 1fr, max-content max-content, 40px);
+
+		h2 {
+			@include font(36px, 600, black, 44px);
+			margin: 0 0 20px 15px;
+		}
+
+		.primary-color {
+			color: $primary;
+		}
+
+		img {
+			border: 1px solid $light-secondary;
+			border-radius: 10px;
+		}
+
+		li {
+			@include flex(space-between);
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px solid $light-secondary;
+		}
+
+		.add {
+			@include font(18px, 500, white, 22px);
+			justify-self: center;
+			width: max-content;
+			background: $primary;
+			border-radius: 40px;
+			padding: 15px 70px;
+
+			&:disabled {
+				background: $light-secondary;
+				cursor: initial;
+			}
+		}
+		.buttons {
+			display: grid;
+			grid-template-columns: max-content max-content max-content;
+			justify-content: space-evenly;
+			margin: 0px 15px;
+			grid-gap: 10px;
+			gap: 10px;
+		}
+		.count {
+			@include flex;
+			@include font(18px, 600, black, 22px);
+		}
+		.minus,
+		.plus {
+			display: grid;
+			place-items: center;
+			width: 52px;
+			height: 52px;
+			border-radius: 50%;
+			background: #deffbe;
+			transition: background 0.2s;
+		}
+	}
+
+	.top {
+		display: flex;
+		align-items: center;
+
+		p {
+			@include flex;
+			@include font(14px, 500, black, 17px);
+			background: $secondary;
+			padding: 10px 20px;
+			border-radius: 20px;
+
+			svg {
+				margin-right: 6px;
+			}
+		}
+		p:not(:last-child) {
+			margin-right: 24px;
+		}
+	}
+
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+}

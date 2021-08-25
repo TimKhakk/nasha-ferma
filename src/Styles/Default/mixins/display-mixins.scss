@@ -5,8 +5,9 @@
 	flex-direction: $direction;
 }
 
-@mixin grid($columns: 1fr, $rows: 1fr) {
+@mixin grid($columns: 1fr, $rows: 1fr, $gap: 0px) {
 	display: grid;
 	grid-template-columns: $columns;
 	grid-template-rows: $rows;
+	gap: $gap;
 }

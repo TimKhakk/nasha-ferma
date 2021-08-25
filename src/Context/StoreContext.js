@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { data } from '../data';
 
 // Hooks
@@ -9,6 +9,9 @@ const StoreContext = createContext();
 export const useStoreContext = () => useContext(StoreContext);
 
 export const StoreContextProvider = ({ children }) => {
+	const [modal, setModal] = useState(false);
+	const [selProduct, setSelProduct] = useState(null);
+
 	const [cart, setCart] = useLocalStorage([], 'cartLocalStorage');
 	const [category, setCategory] = useLocalStorage('Овощи', 'selectedCategoryLocalStorage');
 
@@ -22,7 +25,11 @@ export const StoreContextProvider = ({ children }) => {
 
 	const groups = [...new Set(categoriedProducts.map(item => item.group))]; // ["Огурцы", "Томаты"]
 
-	const plusProductToCart = id => {
+	const toggleModal = () => {
+		setModal(prev => !prev);
+	};
+
+	const plusProduct = id => {
 		setCart(prevCart => {
 			const foundProduct = prevCart.find(item => item.id === id);
 			const updatedProduct = {
@@ -41,13 +48,13 @@ export const StoreContextProvider = ({ children }) => {
 		});
 	};
 
-	const deleteProduct = id => setCart(prevCart => prevCart.filter(item => item.id !== id));
+	const removeProduct = id => setCart(prevCart => prevCart.filter(item => item.id !== id));
 
-	const minusProductToCart = id => {
+	const minusProduct = id => {
 		setCart(prevCart => {
 			const foundProduct = prevCart.find(item => item.id === id);
 			if (foundProduct.count <= 1) {
-				deleteProduct(id);
+				removeProduct(id);
 			}
 			const updatedProduct = {
 				...foundProduct,
@@ -66,7 +73,7 @@ export const StoreContextProvider = ({ children }) => {
 		});
 	};
 
-	const addProductToCart = id => {
+	const addProduct = id => {
 		setCart(prevCart => {
 			const newProduct = data.find(item => item.id === id);
 			newProduct.count = 1;
@@ -80,11 +87,15 @@ export const StoreContextProvider = ({ children }) => {
 		<StoreContext.Provider
 			value={{
 				cart,
-				plusProductToCart,
-				deleteProduct,
-				minusProductToCart,
+				modal,
+				selProduct,
+				setSelProduct,
+				toggleModal,
+				plusProduct,
+				removeProduct,
+				minusProduct,
 				products,
-				addProductToCart,
+				addProduct,
 				countTotalPrice,
 				categoriedProducts,
 				groups,

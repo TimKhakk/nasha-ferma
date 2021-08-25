@@ -10,7 +10,7 @@ function Categories() {
 
 			<ul className='items'>
 				{products.map(item => (
-					<Category item={item} changeCategory={changeCategory} />
+					<Category key={item[0].category} item={item} change={changeCategory} />
 				))}
 			</ul>
 		</div>

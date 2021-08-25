@@ -55,7 +55,7 @@
 		cursor: pointer;
 		padding: 10px 15px;
 		border-radius: 38px;
-		background: $primary-color;
+		background: $primary;
 		color: white;
 		fill: white;
 	}
@@ -136,12 +136,12 @@
 			height: 34px;
 			width: 34px;
 			padding: 0;
-			background: $secondary-color;
+			background: $secondary;
 		}
 
 		.nav__side-item-cart,
 		.nav__side-item-auth {
-			fill: $dark-grey-color;
+			fill: $dark-grey;
 		}
 		.nav__side-item-cart {
 			width: 18px !important;

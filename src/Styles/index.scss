@@ -1,13 +1,14 @@
 // Default
 @import './Default/variables.scss';
+@import './Default/mixins/display-mixins.scss';
+@import './Default/mixins/font-mixins.scss';
+@import './Default/mixins/screen-mixins.scss';
 @import './Default/default.scss';
 @import './Default/container.scss';
 @import './Default/breadcrumbs.scss';
 @import './Default/logo.scss';
 @import './Default/button.scss';
-@import './Default/mixins/display-mixins.scss';
-@import './Default/mixins/font-mixins.scss';
-@import './Default/mixins/screen-mixins.scss';
+@import './Default/modal.scss';
 
 // Header
 @import './Header/header.scss';

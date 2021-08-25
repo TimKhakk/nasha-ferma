@@ -20,7 +20,7 @@ const Groups = () => {
 
 						<div className='items'>
 							{groupedProducts.map(product => (
-								<ProductCard data={product} />
+								<ProductCard key={product.id} data={product} />
 							))}
 						</div>
 					</motion.div>

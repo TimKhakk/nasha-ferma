@@ -1,6 +1,6 @@
 .mini-cart {
 	background: white;
-	border: 1px solid $secondary-color;
+	border: 1px solid $secondary;
 	border-radius: 10px;
 	padding-bottom: 20px;
 	height: min-content;
@@ -22,7 +22,7 @@
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 30px;
-		background: $secondary-color;
+		background: $secondary;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 	}
@@ -37,7 +37,7 @@
 	grid-column-gap: 5px;
 
 	padding: 12px 20px;
-	border-top: 1px solid $secondary-color;
+	border-top: 1px solid $secondary;
 
 	&__title {
 		grid-column: span 5;
@@ -80,12 +80,12 @@
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
-	background: $secondary-color;
+	background: $secondary;
 	font-size: 15px;
 }
 
 .mini-cart-item__btn-svg {
-	fill: $light-grey-color;
+	fill: $light-grey;
 }
 
 .mini-cart-item__delete-btn {
@@ -102,7 +102,7 @@
 }
 
 .mini-cart-item__delete-btn-svg {
-	fill: $dark-grey-color;
+	fill: $dark-grey;
 }
 
 .mini-cart__buy {
@@ -116,14 +116,14 @@
 	padding: 10px 25px;
 	cursor: pointer;
 	border-radius: 30px;
-	background: $primary-color;
+	background: $primary;
 }
 
 .mini-cart__title_empty {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
-	color: $light-grey-color;
+	color: $light-grey;
 }
 
 .container-sm-cart {
@@ -160,7 +160,7 @@
 		display: grid;
 		color: white;
 		padding: 7px 30px;
-		background: $primary-color;
+		background: $primary;
 		grid-template-columns: 1fr 1fr 1fr;
 		align-items: center;
 		border-radius: 30px;

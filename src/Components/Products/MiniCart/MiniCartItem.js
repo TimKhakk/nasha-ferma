@@ -4,7 +4,7 @@ import Svg from '../../Default/Svg';
 
 const MiniCartItem = ({ item }) => {
 	const { id, name, weight, price, count } = item;
-	const { plusProductToCart, deleteProduct, minusProductToCart } = useStoreContext();
+	const { plusProduct, removeProduct, minusProduct } = useStoreContext();
 	return (
 		<motion.div
 			key={id}
@@ -19,17 +19,17 @@ const MiniCartItem = ({ item }) => {
 
 			<span className='mini-cart-item__total-price'>{price * count} ₽</span>
 
-			<button className='mini-cart-item__minus-btn' onClick={() => minusProductToCart(id)}>
+			<button className='mini-cart-item__minus-btn' onClick={() => minusProduct(id)}>
 				<Svg id='minus' w='12' h='2' />
 			</button>
 
 			<span className='mini-cart-item__total-count'>{count}</span>
 
-			<button onClick={() => plusProductToCart(id)} className='mini-cart-item__plus-btn'>
+			<button onClick={() => plusProduct(id)} className='mini-cart-item__plus-btn'>
 				<Svg id='plus' w='12' h='12' />
 			</button>
 
-			<button className='mini-cart-item__delete-btn' onClick={() => deleteProduct(id)}>
+			<button className='mini-cart-item__delete-btn' onClick={() => removeProduct(id)}>
 				<Svg id='delete' w='19' h='19' />
 			</button>
 
