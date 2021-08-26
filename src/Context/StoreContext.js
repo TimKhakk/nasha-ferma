@@ -10,7 +10,7 @@ export const useStoreContext = () => useContext(StoreContext);
 
 export const StoreContextProvider = ({ children }) => {
 	const [modal, setModal] = useState(false);
-	const [selProduct, setSelProduct] = useState(null);
+	const [selProduct, setSelProduct] = useState({});
 
 	const [cart, setCart] = useLocalStorage([], 'cartLocalStorage');
 	const [category, setCategory] = useLocalStorage('Овощи', 'selectedCategoryLocalStorage');
@@ -26,6 +26,9 @@ export const StoreContextProvider = ({ children }) => {
 	const groups = [...new Set(categoriedProducts.map(item => item.group))]; // ["Огурцы", "Томаты"]
 
 	const toggleModal = () => {
+		document.body.className === 'body-modal'
+			? document.body.classList.remove('body-modal')
+			: document.body.classList.add('body-modal');
 		setModal(prev => !prev);
 	};
 

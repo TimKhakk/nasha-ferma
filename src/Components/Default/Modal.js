@@ -2,7 +2,7 @@ import { useStoreContext } from '../../Context/StoreContext';
 import Svg from './Svg';
 
 const Modal = () => {
-	const { cart, toggleModal, selProduct, addProduct, minusProduct, plusProduct } =
+	const { cart, toggleModal, selProduct, addProduct, minusProduct, plusProduct, modal } =
 		useStoreContext();
 	const {
 		id,
@@ -19,7 +19,7 @@ const Modal = () => {
 	} = selProduct;
 
 	return (
-		<div className='modal-bg' onClick={toggleModal}>
+		<div className={`modal-bg ${modal && 'active'}`} onClick={toggleModal}>
 			<div className='modal' onClick={e => e.stopPropagation()}>
 				<div className='top'>
 					<p>
