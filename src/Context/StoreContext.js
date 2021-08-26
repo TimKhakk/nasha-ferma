@@ -102,6 +102,7 @@ export const StoreContextProvider = ({ children }) => {
 				countTotalPrice,
 				categoriedProducts,
 				groups,
+				category,
 				changeCategory,
 			}}
 		>

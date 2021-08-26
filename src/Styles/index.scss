@@ -8,7 +8,10 @@
 @import './Default/breadcrumbs.scss';
 @import './Default/logo.scss';
 @import './Default/button.scss';
-@import './Default/modal.scss';
+
+// Modal
+@import './Modal/modal.scss';
+@import './Modal/content.scss';
 
 // Header
 @import './Header/header.scss';

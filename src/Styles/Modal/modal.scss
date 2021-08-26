@@ -1,0 +1,119 @@
+.modal-bg {
+	@include flex(center, center);
+	height: 100vh;
+	width: 100vw;
+	background: rgba($color: #000000, $alpha: 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.2s;
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
+.modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	background: white;
+	width: 900px;
+	padding: 40px 100px;
+	border-radius: 10px;
+	height: 500px;
+	z-index: 9999;
+	filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.14))
+		drop-shadow(0px 6px 30px rgba(0, 0, 0, 0.12)) drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.2));
+
+	.top {
+		display: flex;
+		align-items: center;
+
+		p {
+			@include flex;
+			@include font(14px, 500, black, 17px);
+			background: $secondary;
+			padding: 10px 20px;
+			border-radius: 20px;
+
+			svg {
+				margin-right: 6px;
+			}
+		}
+		p:not(:last-child) {
+			margin-right: 24px;
+		}
+	}
+
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+}
+
+// <=1200px
+@include max-screen($xl) {
+	.modal {
+		padding: 35px 80px;
+		width: 800px;
+	}
+}
+
+// <=992px
+@include max-screen($lg) {
+	.modal-bg {
+		@include flex(center, flex-start);
+		margin-top: 59px;
+	}
+	.modal {
+		width: 100%;
+		padding: 20px 50px 40px;
+		border-radius: 0;
+		height: 500px;
+	}
+}
+
+// <=768px
+@include max-screen($md) {
+	.modal {
+		padding: 20px 25px 35px;
+
+		height: max-content;
+		.top {
+			display: flex;
+			align-items: center;
+
+			p {
+				@include flex;
+				@include font(14px, 500, black, 17px);
+				background: $secondary;
+				padding: 7px 14px;
+			}
+			p:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+// <=578px
+@include max-screen($sm) {
+	.modal {
+		height: 100%;
+		.top {
+			display: none;
+			flex-wrap: wrap;
+
+			p:not(:last-child) {
+				margin-right: 15px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

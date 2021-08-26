@@ -5,6 +5,10 @@
 	cursor: pointer;
 	transition: background 0.2s, color 0.2s;
 
+	&.active {
+		background: $light-secondary;
+	}
+
 	&:last-child {
 		padding-bottom: 25px;
 		border-bottom-left-radius: 10px;
@@ -29,7 +33,7 @@
 }
 
 // 0 - 576px
-@media screen and (max-width: $breakpoints-sm) {
+@media screen and (max-width: $breakpoints-md) {
 	.category {
 		@include flex(space-between);
 		background: $secondary;

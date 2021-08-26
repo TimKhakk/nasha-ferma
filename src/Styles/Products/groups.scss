@@ -21,15 +21,24 @@
 	}
 }
 
+@include max-screen($lg) {
+	.group {
+		.items {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
 // 0 - 576px
 @media screen and (max-width: $breakpoints-sm) {
 	.group {
 		.items {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr;
 			gap: 15px;
 		}
 
 		.group__title {
+			text-align: center;
 			padding: 10px 0;
 			font-size: 20px;
 			font-weight: 600;
@@ -42,8 +51,10 @@
 @media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-md) {
 	.group {
 		.items {
-			grid-template-columns: 1fr 1fr;
-			gap: 26px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		.items {
+			gap: 10px;
 		}
 
 		.group__title {

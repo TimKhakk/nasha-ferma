@@ -2,7 +2,7 @@ import { useStoreContext } from '../../Context/StoreContext';
 import Category from './Category';
 
 function Categories() {
-	const { products, changeCategory } = useStoreContext();
+	const { products, changeCategory, category } = useStoreContext();
 
 	return (
 		<div className='categories'>
@@ -10,7 +10,12 @@ function Categories() {
 
 			<ul className='items'>
 				{products.map(item => (
-					<Category key={item[0].category} item={item} change={changeCategory} />
+					<Category
+						key={item[0].category}
+						item={item}
+						change={changeCategory}
+						category={category}
+					/>
 				))}
 			</ul>
 		</div>
