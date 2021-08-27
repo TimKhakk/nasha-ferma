@@ -1,0 +1,18 @@
+.mini-cart {
+	.empty {
+		text-align: center;
+		padding: 30px 60px 30px 60px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+		.empty__title {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+			color: $light-grey;
+		}
+	}
+}

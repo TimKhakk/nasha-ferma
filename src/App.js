@@ -12,7 +12,6 @@ import Footer from './Components/Footer/Footer';
 // Firebase
 import firebase from 'firebase';
 import config from './Firebase/config';
-import Modal from './Components/Default/Modal';
 
 firebase.initializeApp(config);
 
@@ -31,7 +30,6 @@ function App() {
 
 					<Route path='/auth' component={Auth} />
 				</Switch>
-				<Modal />
 				<Footer />
 			</Router>
 		</div>

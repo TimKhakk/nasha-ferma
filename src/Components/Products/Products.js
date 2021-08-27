@@ -3,6 +3,7 @@ import Container from '../Default/Container';
 import Categories from './Categories';
 import MiniCart from './MiniCart/MiniCart';
 import Groups from './ProductCards/Groups';
+import Modal from '../Default/Modal';
 
 function Products() {
 	return (
@@ -16,6 +17,8 @@ function Products() {
 					<Groups />
 
 					<MiniCart />
+
+					<Modal />
 				</div>
 			</Container>
 		</div>

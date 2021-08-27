@@ -14,8 +14,8 @@
 	}
 }
 
-// 768px - 1200px
-@media screen and (min-width: $breakpoints-md) and (max-width: $breakpoints-xl) {
+// 992px - 1200px
+@media screen and (min-width: $breakpoints-lg) and (max-width: $breakpoints-xl) {
 	.products__row {
 		grid-template-columns: 250px 1fr;
 		grid-template-rows: 1fr;

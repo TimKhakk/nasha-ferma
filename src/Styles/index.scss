@@ -8,6 +8,7 @@
 @import './Default/breadcrumbs.scss';
 @import './Default/logo.scss';
 @import './Default/button.scss';
+@import './Default/sm-cart.scss';
 
 // Modal
 @import './Modal/modal.scss';
@@ -38,8 +39,10 @@
 @import './Products/categories/category.scss';
 
 @import './Products/groups.scss';
-@import './Products/mini-cart.scss';
-@import './Products/mini-cart-bottom.scss';
+@import './Products/mini-cart/mini-cart.scss';
+@import './Products/mini-cart/empty.scss';
+@import './Products/mini-cart/mini-cart-bottom.scss';
+@import './Products/mini-cart/item.scss';
 
 // Cart page
 @import './Cart/cart.scss';

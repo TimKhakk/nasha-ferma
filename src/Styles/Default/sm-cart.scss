@@ -1,0 +1,49 @@
+.container-sm-cart {
+	display: none;
+}
+
+// 0 - 576px
+@media screen and (max-width: $breakpoints-sm) {
+	.container-sm-cart {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: white;
+		border-top: 1px solid #f3f3f3;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 6px;
+		transition: 0.2s;
+		transform: translateY(100%);
+
+		&.active {
+			transform: translateY(0);
+		}
+	}
+
+	.sm-cart {
+		display: grid;
+		color: white;
+		padding: 7px 30px;
+		background: $primary;
+		grid-template-columns: 1fr 1fr 1fr;
+		align-items: center;
+		border-radius: 30px;
+		flex: 1;
+
+		.delivery-time {
+			text-align: left;
+		}
+
+		.title {
+			text-align: center;
+		}
+
+		.price {
+			text-align: right;
+		}
+	}
+}

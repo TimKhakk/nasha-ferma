@@ -1,0 +1,77 @@
+.mini-cart {
+	.item {
+		@include grid(25px 20px 25px 60px 50px 1fr, 1fr 25px, 10px);
+		grid-column-gap: 5px;
+
+		padding: 12px 20px;
+		border-top: 1px solid $secondary;
+
+		.item__title {
+			@include font(14px, 500, black, 17px);
+			grid-column: span 5;
+		}
+
+		.item__total-price {
+			@include font(18px, 600, black, 22px);
+			display: grid;
+			align-items: center;
+			justify-content: flex-end;
+			grid-row: span 2;
+		}
+
+		.item__price {
+			@include font(16px, 500, black, 20px);
+			display: grid;
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		.item__total-count {
+			display: grid;
+			place-items: center;
+		}
+
+		.item__minus,
+		.item__plus {
+			display: grid;
+			place-items: center;
+			border: none;
+			cursor: pointer;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: $secondary;
+			font-size: 15px;
+		}
+
+		.item__btn-svg {
+			fill: $light-grey;
+		}
+
+		.item__delete {
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			background: transparent;
+			align-self: center;
+			justify-self: flex-end;
+			border: none;
+			cursor: pointer;
+			width: 25px;
+			height: 25px;
+		}
+
+		.item__delete svg {
+			fill: $dark-grey;
+		}
+	}
+}
+
+// <=576px
+@include max-screen($sm) {
+	.mini-cart {
+		.item {
+			display: none;
+		}
+	}
+}

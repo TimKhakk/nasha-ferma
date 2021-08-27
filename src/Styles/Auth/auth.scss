@@ -1,0 +1,25 @@
+.container.auth {
+	display: grid;
+	grid-template-rows: 80px 1fr 1fr 1fr;
+	place-items: center;
+	background-color: tomato;
+	height: 80vh;
+
+	.spring {
+		height: 80px;
+		width: 80px;
+		border-radius: 20px;
+		background: white;
+	}
+
+	button {
+		padding: 10px 25px;
+		border-radius: 20px;
+		background: white;
+		transition: 0.2s;
+
+		&:hover {
+			background: plum;
+		}
+	}
+}

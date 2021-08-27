@@ -29,6 +29,7 @@ const ProductCard = ({ data }) => {
 				src={imgUrl}
 				alt={name}
 				className='img'
+				onClick={showModal}
 			/>
 
 			<p className='title'>{name}</p>

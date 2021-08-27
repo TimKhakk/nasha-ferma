@@ -1,0 +1,35 @@
+.mini-cart {
+	background: white;
+	border: 1px solid $secondary;
+	border-radius: 10px;
+	padding-bottom: 20px;
+	height: min-content;
+	display: flex;
+	flex-direction: column;
+
+	.title {
+		@include font(24px, 700, black, 30px);
+		padding: 20px;
+		background: $secondary;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+}
+
+.mini-cart__buy {
+	@include font(18px, 500, white, 22px);
+	margin: auto;
+	width: 85%;
+	border: none;
+	padding: 10px 25px;
+	cursor: pointer;
+	border-radius: 30px;
+	background: $primary;
+}
+
+// <=1200
+@include max-screen($xl) {
+	.mini-cart {
+		display: none;
+	}
+}

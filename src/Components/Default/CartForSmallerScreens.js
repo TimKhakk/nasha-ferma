@@ -7,9 +7,9 @@ const CartForSmallerScreens = () => {
 	return (
 		<div className={cart.length === 0 ? 'container-sm-cart' : 'container-sm-cart active'}>
 			<Link to='/cart' className='sm-cart'>
-				<span className='sm-cart__delivery-time'>5-10 мин.</span>
-				<div className='sm-cart__title'>К оплате</div>
-				<span className='sm-cart__price'>{countTotalPrice()} ₽</span>
+				<span className='delivery-time'>5-10 мин.</span>
+				<div className='title'>К оплате</div>
+				<span className='price'>{countTotalPrice()} ₽</span>
 			</Link>
 		</div>
 	);

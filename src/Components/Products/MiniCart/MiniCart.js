@@ -11,12 +11,12 @@ function MiniCart() {
 	return (
 		<>
 			<div className='mini-cart'>
-				<Link to='/cart' className='mini-cart__title'>
+				<Link to='/cart' className='title'>
 					Корзина
 				</Link>
 
 				{cart.map(item => (
-					<MiniCartItem item={item} />
+					<MiniCartItem key={item.id} item={item} />
 				))}
 
 				{cart.length === 0 ? <MiniCartEmpty /> : <MiniCartNotEmpty />}

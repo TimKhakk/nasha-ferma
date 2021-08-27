@@ -1,0 +1,44 @@
+.bottom {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border-top: 1px solid $secondary;
+	gap: 10px;
+
+	.bottom__item {
+		@include flex(space-between, center);
+	}
+
+	.item__title,
+	.value {
+		@include font(14px, 600, black, 17px);
+	}
+
+	.item__title {
+		color: $dark-grey;
+	}
+
+	.value {
+		color: #9d9d9d;
+	}
+
+	.price-title,
+	.price {
+		@include font(24px, 600, black, 30px);
+	}
+
+	.price-title {
+		color: $dark-grey;
+	}
+
+	.price {
+		color: black;
+	}
+}
+
+// 0 - $working-breakpoint
+@media screen and (max-width: $working-breakpoint) {
+	.bottom {
+		display: none;
+	}
+}
