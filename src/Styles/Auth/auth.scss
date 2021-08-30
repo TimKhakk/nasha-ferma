@@ -1,25 +1,84 @@
 .container.auth {
 	display: grid;
-	grid-template-rows: 80px 1fr 1fr 1fr;
-	place-items: center;
-	background-color: tomato;
+	grid-template-columns: 2fr 1fr;
+	justify-content: center;
+	align-items: flex-start;
 	height: 80vh;
+	color: darkslategray;
+	padding: 25px;
+	gap: 25px;
 
-	.spring {
-		height: 80px;
-		width: 80px;
+	.items {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 25px;
+		padding: 25px;
 		border-radius: 20px;
-		background: white;
+		border: 1px solid darkslategray;
+		height: 100%;
 	}
 
-	button {
-		padding: 10px 25px;
+	.item {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		padding: 25px;
 		border-radius: 20px;
-		background: white;
-		transition: 0.2s;
+		border: 1px solid darkslategray;
 
-		&:hover {
-			background: plum;
+		button {
+			align-self: flex-end;
+			padding: 10px 25px;
+			border-radius: 20px;
+			transition: 0.2s;
+			border: 1px solid darkslategrey;
+
+			&:hover {
+				background: white;
+			}
+		}
+	}
+
+	.box {
+		display: grid;
+		grid-template-rows: max-content 1fr max-content;
+		align-items: flex-start;
+		flex-direction: column;
+		overflow: hidden;
+		border-radius: 20px;
+		border: 1px solid darkslategray;
+		transition: height 0.5s ease-in-out;
+
+		h2 {
+			width: 100%;
+			padding: 25px;
+			border-bottom: darkslategrey 1px solid;
+			align-self: flex-start;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			transition: height 0.5s ease-in-out;
+		}
+
+		li {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding: 25px;
+			border-bottom: darkslategrey 1px solid;
+		}
+		.buy {
+			justify-self: flex-end;
+			width: 100%;
+			padding: 10px 25px;
+			font-size: 24px;
+			background: #90ee90;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
 		}
 	}
 }
