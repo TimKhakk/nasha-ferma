@@ -1,65 +1,132 @@
 .homepage-main {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 350px;
+	position: relative;
 
-    &__main-img {
-        width: 100%;
-        object-fit: cover;
-        max-height: 100%;
-        border-radius: 20px;
-    }
+	img {
+		width: 100%;
+		object-fit: cover;
+		max-height: 100%;
+		border-radius: 20px;
+	}
 
-    &__title {
-        left: 7%;
-        position: absolute;
-        color: white;
-        font-size: 48px;
-        font-weight: bold;
-    }
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		left: 7%;
+	}
+
+	h1 {
+		@include font(48px, 700, white, 60px);
+		margin-bottom: 30px;
+	}
+
+	label {
+		@include flex(space-between);
+		padding: 4px 5px 4px 0;
+		background: #fff;
+		border-radius: 54px;
+		position: relative;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		left: 0;
+		padding-top: 28px;
+		top: 26px;
+		border-bottom-left-radius: 26px;
+		border-bottom-right-radius: 26px;
+		background: #fff;
+		width: 100%;
+		box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.08),
+			0px 8px 24px -4px rgba(24, 39, 75, 0.05);
+
+		transition: 0.2s ease-in-out;
+	}
+
+	li {
+		display: grid;
+	}
+
+	li a {
+		@include font(18px, 500, black, 26px);
+		border-top: 1px solid $light-secondary;
+		padding: 12px 25px;
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			background: $light-secondary;
+		}
+	}
+
+	input {
+		@include font(18px, 500, black, 24px);
+		width: 100%;
+		margin-left: 25px;
+		border: none;
+		background: transparent;
+		z-index: 999;
+	}
+
+	// input:focus-visible ~ ul {
+	// 	display: flex;
+	// }
+
+	input:focus-visible {
+		outline: none;
+	}
+
+	button {
+		@include font(18px, 500, white, 22px);
+		background: $primary;
+		padding: 12px 20px;
+		border-radius: 42px;
+		z-index: 999;
+	}
 }
 
-// 0 - 576px
-@media screen and (max-width: $breakpoints-sm) {
-    .homepage-main {
-        width: 100%;
-        height: 150px;
-        border-radius: 0;
-        display: flex;
-        text-align: center;
-        padding: 20px 0 0 0;
-        align-items: flex-start;
-        background: transparent;
-
-        &__title {
-            color: black;
-            font-size: 24px;
-            line-height: 30px;
-            font-weight: bold;
-        }
-
-        &__main-img {
-            display: none;
-        }
-    }
+// <=1200px
+@include max-screen($xl) {
+	.homepage-main {
+		h1 {
+			@include font(40px, 700, white, 46px);
+		}
+	}
 }
 
-// 576px - 768px
-@media screen and (min-width: $breakpoints-sm) and (max-width: $breakpoints-md) {
-    .homepage-main__title {
-        font-size: 30px;
-        line-height: 36px;
-        font-weight: 600;
-    }
+// <=768px
+@include max-screen($md) {
+	.homepage-main {
+		h1 {
+			@include font(30px, 700, white, 36px);
+		}
+	}
 }
 
-// 768px - 1200px
-@media screen and (min-width: $breakpoints-md) and (max-width: $breakpoints-xl) {
-    .homepage-main__title {
-        font-size: 40px;
-        line-height: 46px;
-        font-weight: 700;
-    }
+// <=576px
+@include max-screen($sm) {
+	.homepage-main {
+		width: 100%;
+		height: 150px;
+		border-radius: 0;
+		display: flex;
+		text-align: center;
+		padding: 20px 0 0 0;
+		align-items: flex-start;
+		background: transparent;
+
+		h1 {
+			@include font(24px, 700, black, 30px);
+		}
+
+		img {
+			display: none;
+		}
+	}
 }

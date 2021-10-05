@@ -69,7 +69,7 @@ export const data = [
 	},
 	{
 		id: 7,
-		name: 'Томаты',
+		name: 'Сочные томаты',
 		farm: 'Ермишинская овощная ферма',
 		transportation: '21.05.2021',
 		averageWeightOfUnit: '300',

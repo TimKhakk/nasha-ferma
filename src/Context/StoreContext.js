@@ -89,6 +89,7 @@ export const StoreContextProvider = ({ children }) => {
 	return (
 		<StoreContext.Provider
 			value={{
+				data,
 				cart,
 				modal,
 				selProduct,
